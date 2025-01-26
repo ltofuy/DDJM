@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>M2GoForm</class>
+ <widget class="QWidget" name="M2GoForm">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label_bg">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>360</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="rs_ddjm.qrc">:/Resource/Monika-in-club.JPG</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_find_bg">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>620</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(254, 190, 225, 180);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_dir">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>501</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(113, 37, 113, 128);
+border-color: rgb(255, 255, 255);
+color: rgb(254, 230, 244);
+font: 16px &quot;Arial&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_find">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>310</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Find &amp; Set</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 16px &quot;Bauhaus 93&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Monika</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>230</y>
+     <width>600</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+border-width: 0px;
+color:white;</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_log">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>270</width>
+     <height>130</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+background-color: rgba(113, 37, 113, 128);
+border-color: rgb(255, 255, 255);
+color: rgb(254, 230, 244);
+font: 16px &quot;Arial&quot;;
+}
+
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="rs_ddjm.qrc"/>
+ </resources>
+ <connections/>
+</ui>

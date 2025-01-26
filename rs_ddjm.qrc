@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resource/bg.JPG</file>
+        <file>Resource/ddjm-d.gif</file>
+        <file>Resource/Monika.csv</file>
+        <file>Resource/Natsuki-1.csv</file>
+        <file>Resource/Natsuki-2.csv</file>
+        <file>Resource/Sayori-1.csv</file>
+        <file>Resource/Yuri-1.csv</file>
+        <file>Resource/Yuri-2.csv</file>
+        <file>Resource/M-mini.png</file>
+        <file>Resource/N-mini.png</file>
+        <file>Resource/S-mini.png</file>
+        <file>Resource/Y-mini.png</file>
+        <file>Resource/none-icon-mini.png</file>
+        <file>Resource/MAS-ss.png</file>
+        <file>Resource/Monika-in-club.JPG</file>
+    </qresource>
+</RCC>

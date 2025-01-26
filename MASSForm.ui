@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MASSForm</class>
+ <widget class="QWidget" name="MASSForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>550</width>
+     <height>550</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(254, 190, 225, 180);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>240</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(200, 142, 245);
+font: 16px &quot;Bauhaus 93&quot;;</string>
+   </property>
+   <property name="text">
+    <string>DDLC Dir Path</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_dir">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>430</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(113, 37, 113, 128);
+border-color: rgb(255, 255, 255);
+color: rgb(254, 230, 244);
+font: 16px &quot;Arial&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_find">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>50</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Find &amp; Set</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>531</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+font: 16px &quot;Arial&quot;;
+}
+
+QTabWidget::pane{
+border:none;
+background-color: rgba(113, 37, 113, 128);
+border-color: rgb(255, 255, 255);
+color: rgb(254, 230, 244);
+
+}
+
+QTabBar::tab{
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+min-width:120px;
+min-height:30px;
+max-width:240px;
+max-height:30px;
+background-color: rgba(113, 37, 113, 128);
+color:white;
+}
+QTabBar::tab:hover{
+color:white;
+	background-color: rgba(243, 162, 231, 128);
+}
+QTabBar::tab:selected{
+	color: rgb(255, 255, 127);
+background-color: rgb(243, 162, 231);
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_clothes">
+    <attribute name="title">
+     <string>Clothes</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_clothes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>510</width>
+       <height>340</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: transparent;
+color:white;
+}
+QHeaderView::section{
+background-color: transparent;
+color:white;
+}
+
+QTableCornerButton::section
+{
+background-color: transparent;
+color:white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_ribbon">
+    <attribute name="title">
+     <string>Ribbon</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_ribbon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>510</width>
+       <height>340</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: transparent;
+color:white;
+}
+QHeaderView::section{
+background-color: transparent;
+color:white;
+}
+
+QTableCornerButton::section
+{
+background-color: transparent;
+color:white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_gifts">
+    <attribute name="title">
+     <string>Other Gifts</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_gifts">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>510</width>
+       <height>340</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: transparent;
+color:white;
+}
+QHeaderView::section{
+background-color: transparent;
+color:white;
+}
+
+QTableCornerButton::section
+{
+background-color: transparent;
+color:white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_bg">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>530</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/Resource/MAS-ss.png);
+color:white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_monika_love">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>100</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Love</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_monika_love">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>120</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_MTG">
+   <property name="geometry">
+    <rect>
+     <x>449</x>
+     <y>100</y>
+     <width>91</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Monika2Go</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_visit_Monika">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>100</y>
+     <width>91</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Hi Monika</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
