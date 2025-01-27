@@ -116,9 +116,9 @@ border-bottom-right-radius:4px
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>160</y>
-     <width>531</width>
-     <height>381</height>
+     <y>200</y>
+     <width>530</width>
+     <height>340</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -166,7 +166,7 @@ background-color: rgb(243, 162, 231);
        <x>10</x>
        <y>10</y>
        <width>510</width>
-       <height>340</height>
+       <height>300</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -225,7 +225,7 @@ QScrollBar::sub-line:vertical {
        <x>10</x>
        <y>10</y>
        <width>510</width>
-       <height>340</height>
+       <height>300</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -284,7 +284,7 @@ QScrollBar::sub-line:vertical {
        <x>10</x>
        <y>10</y>
        <width>510</width>
-       <height>340</height>
+       <height>300</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -506,6 +506,53 @@ border-bottom-right-radius:4px
    </property>
    <property name="text">
     <string>Hi Monika</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_backups">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>530</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>backups</string>
    </property>
   </widget>
  </widget>

@@ -129,6 +129,8 @@ MASSForm::MASSForm(QWidget *parent) :
     connect(ui->pushButton_MTG, SIGNAL(clicked()), M2G, SLOT(show()));
 
     connect(ui->pushButton_visit_Monika, SIGNAL(clicked()), this, SLOT(visitMonika()));
+
+    connect(ui->pushButton_backups, SIGNAL(clicked()), this, SLOT(makeBackup()));
 }
 
 MASSForm::~MASSForm()
@@ -317,4 +319,46 @@ void MASSForm::visitMonika()
     QProcess p;
     p.setProgram(path);
     p.startDetached();
+}
+
+void MASSForm::makeBackup()
+{
+    QString content="";
+
+    //制作存档保存;
+    if (QSysInfo::productType() != "windows")
+    {
+        content += "Wait for a function update for non-windows platforms";
+        QMessageBox::information(NULL, "", content, QMessageBox::Ok);
+        return;
+    }
+
+    OSOperationWin osw;
+    QString filepath = osw.currentRoamingPath("RenPy/Monika After Story/persistent");
+    QFile f(filepath);
+    QString str_split="\n";
+    if (f.exists())
+    {
+        QString newPath=QDir::currentPath()+"/Data/persistent_"+QDateTime::currentDateTime().toString("yyyyMMdd_hhmmss");
+        newPath = newPath.replace("/", "\\");
+        QFile::copy(filepath, newPath);
+
+        if (QFile::exists(newPath))
+        {
+            content += "The persistent has been recorded from: "+str_split;
+            content += filepath.replace("\\", "/") + str_split;
+            content += "to: "+str_split;
+            content += newPath.replace("\\", "/");
+        }
+        else {
+            content += "Copy failed to: "+str_split;
+            content += filepath.replace("\\", "/");
+        }
+    }
+    else {
+        content += "Nothing found in: "+str_split;
+        content += filepath.replace("\\", "/");
+    }
+
+    QMessageBox::information(NULL, "", content, QMessageBox::Ok);
 }

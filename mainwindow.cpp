@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     setFixedSize(size());
 
+    setWindowTitle(QString(APP_NAME)+" "+QString(APP_VERSION)+" "+QString(APP_EDITION));
+
     QString path=":/Resource/ddjm-d.gif";
     movie=new QMovie(path);
     movie->setScaledSize(ui->label_gif->size());

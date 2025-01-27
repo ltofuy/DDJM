@@ -33,6 +33,9 @@ int main(int argc, char *argv[])
         qSet.sync();
     }
 
+    //OSOperationWin osWin;
+    //qDebug()<<osWin.getCurrentWindowsUsername();
+
 
     QFont f("Arial");
     f.setPixelSize(16);

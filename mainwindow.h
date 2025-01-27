@@ -19,6 +19,8 @@
 #include "DDLCWordDic.h"
 #include "DDWordDialog.h"
 
+#include "OSOperationWin.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

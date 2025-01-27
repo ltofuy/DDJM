@@ -16,6 +16,8 @@
 
 #include "M2GoForm.h"
 
+#include "OSOperationWin.h"
+
 namespace Ui {
 class MASSForm;
 }
@@ -66,6 +68,9 @@ public slots:
 
     //启动DDLC
     void visitMonika();
+
+    //制作存档保存
+    void makeBackup();
 };
 
 #endif // MASSFORM_H
