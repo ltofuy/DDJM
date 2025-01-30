@@ -17,7 +17,7 @@ TEMPLATE = app
 VERSION = 0.1.3
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"251U\\\"
+DEFINES += APP_EDITION=\\\"251V\\\"
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.

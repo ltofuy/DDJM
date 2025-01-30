@@ -98,7 +98,7 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_gifts<<QStringList{tr("Thermos Mug"), "justmonikathermos"};
     giftCode_gifts<<QStringList{tr("Fudge"), "fudge"};
     giftCode_gifts<<QStringList{tr("Christmas Cookies"), "christmascookies"};
-    giftCode_gifts<<QStringList{tr("Cupcakes"), "cupcakes"};
+    giftCode_gifts<<QStringList{tr("Cupcake"), "cupcake"};
 
     QString giftStatusPath=QDir::currentPath()+"/Data/Gift-Status.ini";
     giftStatusConfig=giftStatusPath;
