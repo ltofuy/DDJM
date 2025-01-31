@@ -20,3 +20,8 @@
 
 2025-01-27 0.1.4
 1. 更新了cupcake
+
+2025-01-30 0.1.5
+1. 使用了Lit&LitC的更新组件DownloadKit和EZAutoUpdate, 以便于处理更新问题
+2. 增加了针对github资源下载的更新方法
+3. 增加了自定义检索spritepacks的gift代码的方法

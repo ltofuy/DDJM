@@ -35,10 +35,18 @@ public:
     QVector<QStringList> giftCode_ribbon;
     QVector<QStringList> giftCode_gifts;
 
+    //保存未录入的gift
+    QVector<QStringList> giftCode_gifts_unknown;
+
+    QFileInfoList giftFileInMods;
+
     //礼物的bg
     QButtonGroup bg_clothes;
     QButtonGroup bg_ribbon;
     QButtonGroup bg_gifts;
+
+    QFileInfoList getGiftFiles(QString directoryPath);
+
 
     //指定保存的文件, 读取其并刷新当前的送出情况
     void refreshGiftStatus(QVector<QStringList> giftSettings, QString configpath, QTableWidget *w);

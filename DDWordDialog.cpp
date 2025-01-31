@@ -9,6 +9,8 @@ DDWordDialog::DDWordDialog(QWidget *parent) :
 
     setFixedSize(size());
 
+    last_count_tab = 0;
+
     //首先初始化widget-1和2
     QVector<QTableWidget*> tables;
     tables<<ui->tableWidget_1;
@@ -61,6 +63,9 @@ DDWordDialog::DDWordDialog(QWidget *parent) :
 
     connect(ui->pushButton_check_1, SIGNAL(clicked()), this, SLOT(checkAct1()));
     connect(ui->pushButton_check_2, SIGNAL(clicked()), this, SLOT(checkAct2()));
+
+    connect(ui->pushButton_reset_1, SIGNAL(clicked()), this, SLOT(reset_1()));
+    connect(ui->pushButton_reset_2, SIGNAL(clicked()), this, SLOT(reset_2()));
 }
 
 DDWordDialog::~DDWordDialog()
@@ -347,4 +352,17 @@ void DDWordDialog::checkAct(QTableWidget *w, bool isRE, QString str_re, int leng
         }
 
     }
+}
+
+
+void DDWordDialog::reset_1()
+{
+    ui->checkBox_re_1->setChecked(false);
+    ui->pushButton_check_1->click();
+}
+
+void DDWordDialog::reset_2()
+{
+    ui->checkBox_re_2->setChecked(false);
+    ui->pushButton_check_2->click();
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UpdateJsonForm</class>
+ <widget class="QWidget" name="UpdateJsonForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>{
+    &quot;github_token&quot;: &quot;&quot;,
+    &quot;release&quot;: [
+        {
+            &quot;enabled&quot;: true,
+            &quot;owner&quot;: &quot;ltofuy&quot;,
+            &quot;repository&quot;: &quot;DDJM&quot;,
+            &quot;description&quot;: &quot;DDJM Test&quot;,
+            &quot;github_url&quot;: &quot;https://github.com/ltofuy/DDJM/releases/download/latest/Doki-Doki-Just-Monika_x64_win.zip&quot;,
+            &quot;version&quot;: &quot;latest&quot;,
+            &quot;stable_version&quot;: true,
+            &quot;extract_flag&quot;: true,
+            &quot;save_path&quot;: &quot;E:/Amusement/Doki-Doki-Just-Monika&quot;,
+            &quot;files&quot;: [
+                &quot;*_x64_win_latest.zip&quot;
+            ]
+        }
+    ]
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -8,6 +8,7 @@
 #include <QButtonGroup>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QDebug>
 
 namespace Ui {
 class DDWordDialog;
@@ -29,6 +30,13 @@ public:
 
     //内部存储已经录入的内容
     QStringList savedWordList[2];
+
+    //记录上次存储的模式
+    //上次存储的tab个数, 1个还是2个
+    int last_count_tab;
+    //按照上次存储的1还是2写入当前名以及存储的单词
+    QString last_name[2];
+    QStringList last_words[2];
 
 public slots:
     //设置词汇
@@ -53,6 +61,9 @@ public slots:
     void checkAct2();
 
     void checkAct(QTableWidget *w, bool isRe, QString str_re, int length, QStringList oWords);
+
+    void reset_1();
+    void reset_2();
 
 private:
     Ui::DDWordDialog *ui;

@@ -66,6 +66,11 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_clothes<<QStringList{tr("Shoulderless Sweater"), "shoulderlesssweater"};
     giftCode_clothes<<QStringList{tr("White and Navyblue Dress"), "whiteandnavybluedress"};
     giftCode_clothes<<QStringList{tr("Pink Shirt"), "pinkshirt"};
+    QStringList giftCode_clothes_single;
+    for (int i=0;i<giftCode_clothes.count();++i)
+    {
+        giftCode_clothes_single<<giftCode_clothes.at(i).last();
+    }
 
     //录入ribbon
     giftCode_ribbon<<QStringList{tr("Black"), "blackribbon"};
@@ -84,6 +89,11 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_ribbon<<QStringList{tr("Teal"), "tealribbon"};
     giftCode_ribbon<<QStringList{tr("Yellow"), "yellowribbon"};
     giftCode_ribbon<<QStringList{tr("Ruby"), "rubyribbon"};
+    QStringList giftCode_ribbon_single;
+    for (int i=0;i<giftCode_ribbon.count();++i)
+    {
+        giftCode_ribbon_single<<giftCode_ribbon.at(i).last();
+    }
 
     //录入other gifts
     giftCode_gifts<<QStringList{tr("Coffee"), "coffee"};
@@ -99,12 +109,12 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_gifts<<QStringList{tr("Fudge"), "fudge"};
     giftCode_gifts<<QStringList{tr("Christmas Cookies"), "christmascookies"};
     giftCode_gifts<<QStringList{tr("Cupcake"), "cupcake"};
+    QStringList giftCode_other_single;
+    for (int i=0;i<giftCode_gifts.count();++i)
+    {
+        giftCode_other_single<<giftCode_gifts.at(i).last();
+    }
 
-    QString giftStatusPath=QDir::currentPath()+"/Data/Gift-Status.ini";
-    giftStatusConfig=giftStatusPath;
-    refreshGiftStatus(giftCode_clothes, giftStatusPath, ui->tableWidget_clothes);
-    refreshGiftStatus(giftCode_ribbon, giftStatusPath, ui->tableWidget_ribbon);
-    refreshGiftStatus(giftCode_gifts, giftStatusPath, ui->tableWidget_gifts);
 
     //初始化设置DDLC文件夹
     QSettings qSet(giftStatusConfig, QSettings::IniFormat);
@@ -114,6 +124,36 @@ MASSForm::MASSForm(QWidget *parent) :
     ui->lineEdit_dir->setText(qSetConfig.value("ID/DDLC_path").toString());
 
     refreshMonikaLove();
+
+    //在此处先检索所有的giftList
+    QDir dir_ddlc(ui->lineEdit_dir->text());
+    if (dir_ddlc.exists())
+    {
+        giftFileInMods = getGiftFiles(ui->lineEdit_dir->text()+"/spritepacks");
+    }
+    else {
+        giftFileInMods.clear();
+    }
+    //再gifts额外增加
+    for (int i=0;i<giftFileInMods.count();++i)
+    {
+        QFileInfo info=giftFileInMods.at(i);
+        QString name=info.baseName();
+        if (!giftCode_other_single.contains(name) &&
+                !giftCode_ribbon_single.contains(name) &&
+                !giftCode_clothes_single.contains(name))
+        {
+            //增加到other中
+            giftCode_gifts<<QStringList{name, name};
+            giftCode_other_single<<name;
+        }
+    }
+
+    QString giftStatusPath=QDir::currentPath()+"/Data/Gift-Status.ini";
+    giftStatusConfig=giftStatusPath;
+    refreshGiftStatus(giftCode_clothes, giftStatusPath, ui->tableWidget_clothes);
+    refreshGiftStatus(giftCode_ribbon, giftStatusPath, ui->tableWidget_ribbon);
+    refreshGiftStatus(giftCode_gifts, giftStatusPath, ui->tableWidget_gifts);
 
     M2G = new M2GoForm;
     M2G->hide();
@@ -361,4 +401,21 @@ void MASSForm::makeBackup()
     }
 
     QMessageBox::information(NULL, "", content, QMessageBox::Ok);
+}
+
+QFileInfoList MASSForm::getGiftFiles(QString directoryPath) {
+    QFileInfoList fileInfoList;
+    QDir dir(directoryPath);
+    if (!dir.exists()) {
+        return fileInfoList; // 返回空列表如果目录不存在
+    }
+    // 查找所有后缀为.gift的文件，递归搜索子目录
+    fileInfoList = dir.entryInfoList(QStringList() << "*.gift", QDir::Files | QDir::NoDotAndDotDot, QDir::Name);
+    // 获取子目录
+    QFileInfoList subDirs = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+    for (const QFileInfo &subDirInfo : subDirs) {
+        QFileInfoList subFiles = getGiftFiles(subDirInfo.absoluteFilePath());
+        fileInfoList.append(subFiles); // 递归得到的文件添加到列表中
+    }
+    return fileInfoList;
 }

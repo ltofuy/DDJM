@@ -34,6 +34,27 @@ MainWindow::MainWindow(QWidget *parent)
     ui->widget_mas->hide();
     //ui->widget_mas->setOpacity(0);
 
+    updateJsonWidget = new UpdateJsonForm;
+    updateJsonWidget->hide();
+
+    //构建Config文件夹, 初始化json
+    QString configDir=QDir::currentPath()+"/Config";
+    QDir dirC(configDir);
+    if (!dirC.exists())
+    {
+        dirC.mkpath(configDir);
+    }
+    if (!QFile::exists(configDir+"/config.json"))
+    {
+        updateJsonWidget->writeTo(configDir+"/config.json");
+    }
+
+    //若Update文件夹不存在则构建
+    createDir(QDir::currentPath()+"/Update");
+    //clearDir(QDir::currentPath()+"/Update");
+    //clearDir(QDir::currentPath()+"/log");
+
+
     bg.addButton(ui->pushButton_word_Sayori, 0);
     bg.addButton(ui->pushButton_word_Yuri, 1);
     bg.addButton(ui->pushButton_word_Natsuki, 2);
@@ -45,6 +66,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     connect(ui->checkBox_MAS, SIGNAL(clicked(bool)), this, SLOT(showMASSupport(bool)));
+
+    //构建后立即触发
+    QTimer::singleShot(5*1000, this, SLOT(autoCheckUpdate()));
 }
 
 MainWindow::~MainWindow()

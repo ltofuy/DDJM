@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.1.3
+VERSION = 0.1.5
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"251V\\\"
+DEFINES += APP_EDITION=\\\"251Y\\\"
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -30,9 +30,15 @@ SOURCES += \
     M2GoForm.cpp \
     MASSForm.cpp \
     OSOperationWin.cpp \
+    UpdateJsonForm.cpp \
+    ez_write_log.cpp \
     main.cpp \
     mainwindow.cpp \
+    mw_autoCheckUpdate.cpp \
     mw_buttonOperation.cpp \
+    mw_checkFileLoopTask.cpp \
+    mw_clearDir.cpp \
+    mw_createDir.cpp \
     mw_quickSearch.cpp \
     mw_showMASSupport.cpp
 
@@ -42,12 +48,15 @@ HEADERS += \
     M2GoForm.h \
     MASSForm.h \
     OSOperationWin.h \
+    UpdateJsonForm.h \
+    ez_write_log.h \
     mainwindow.h
 
 FORMS += \
     DDWordDialog.ui \
     M2GoForm.ui \
     MASSForm.ui \
+    UpdateJsonForm.ui \
     mainwindow.ui
 
 RESOURCES += \
