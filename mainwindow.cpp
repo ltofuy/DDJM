@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     setWindowTitle(QString(APP_NAME)+" "+QString(APP_VERSION)+" "+QString(APP_EDITION));
 
+    tryLinkMaxCount = 5;
+    tryLinkCount = 0;
+
     QString path=":/Resource/ddjm-d.gif";
     movie=new QMovie(path);
     movie->setScaledSize(ui->label_gif->size());
@@ -81,4 +84,16 @@ void MainWindow::showEvent(QShowEvent *e)
     e->accept();
 
     //QTimer::singleShot(500, mp3Player, SLOT(play()));
+}
+
+void MainWindow::changeEvent(QEvent *e)
+{
+    QWidget::changeEvent(e);
+        switch (e->type()) {
+        case QEvent::LanguageChange:
+            ui->retranslateUi(this);
+            break;
+        default:
+            break;
+        }
 }

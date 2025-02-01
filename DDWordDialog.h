@@ -9,6 +9,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QDebug>
+#include <QEvent>
 
 namespace Ui {
 class DDWordDialog;
@@ -67,6 +68,9 @@ public slots:
 
 private:
     Ui::DDWordDialog *ui;
+
+protected:
+    void changeEvent(QEvent *e);
 };
 
 #endif // DDWORDDIALOG_H

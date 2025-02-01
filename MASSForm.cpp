@@ -178,6 +178,17 @@ MASSForm::~MASSForm()
     delete ui;
 }
 
+void MASSForm::changeEvent(QEvent *e)
+{
+    QWidget::changeEvent(e);
+        switch (e->type()) {
+        case QEvent::LanguageChange:
+            ui->retranslateUi(this);
+            break;
+        default:
+            break;
+        }
+}
 
 void MASSForm::refreshGiftStatus(QVector<QStringList> giftSettings, QString configpath, QTableWidget *w)
 {

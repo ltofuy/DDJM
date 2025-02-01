@@ -38,7 +38,7 @@ DDWordDialog::DDWordDialog(QWidget *parent) :
                     w->setItem(j, k, new QTableWidgetItem);
                 }
                 QPushButton *b=new QPushButton;
-                b->setText("Translate");
+                b->setText(tr("Translate"));
                 w->setCellWidget(j, columnCount-1, b);
                 bgGs.data()[i]->addButton(b, j);
             }
@@ -71,6 +71,19 @@ DDWordDialog::DDWordDialog(QWidget *parent) :
 DDWordDialog::~DDWordDialog()
 {
     delete ui;
+}
+
+
+void DDWordDialog::changeEvent(QEvent *e)
+{
+    QWidget::changeEvent(e);
+        switch (e->type()) {
+        case QEvent::LanguageChange:
+            ui->retranslateUi(this);
+            break;
+        default:
+            break;
+        }
 }
 
 void DDWordDialog::setWord(QString cname, QStringList words)

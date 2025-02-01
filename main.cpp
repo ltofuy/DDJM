@@ -43,5 +43,9 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
+
+    //在显示后处理翻译问题
+    w.checkLanguage();
+
     return a.exec();
 }

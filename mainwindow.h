@@ -16,6 +16,7 @@
 #include <QSettings>
 #include <QDateTime>
 //#include <QDesktopServices>
+#include <QTranslator>
 
 #include "DDLCWordDic.h"
 #include "DDWordDialog.h"
@@ -62,8 +63,14 @@ public:
     //循环loop
     QEventLoop checkLoop;
 
+    //trylinkCount 最大检查次数
+    int tryLinkMaxCount;
+    int tryLinkCount;
+
 protected:
     void showEvent(QShowEvent *e);
+
+    void changeEvent(QEvent *e);
 
 private:
     Ui::MainWindow *ui;
@@ -80,5 +87,8 @@ public slots:
 
     //循环loop检查
     void checkFileLoopTask();
+
+    //检查翻译
+    void checkLanguage();
 };
 #endif // MAINWINDOW_H

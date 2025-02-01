@@ -59,6 +59,8 @@ public:
 private:
     Ui::MASSForm *ui;
 
+protected:
+    void changeEvent(QEvent *e);
 
 public slots:
     void buttonOperation_clothes(int a);

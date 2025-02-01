@@ -4,6 +4,18 @@
 void MainWindow::checkFileLoopTask()
 {
     qDebug()<<"执行了1次checkFileLoopTask";
+    tryLinkCount ++;
+
+    if (tryLinkCount >= tryLinkMaxCount)
+    {
+        //已达到最大尝试;
+        isInCheckLoop = false;
+        checkLoop.quit();
+
+        tryLinkCount = 0;
+
+        qDebug()<<"达到最大尝试次数";
+    }
 
     if (isInCheckLoop == true)
     {
@@ -19,5 +31,6 @@ void MainWindow::checkFileLoopTask()
             qDebug()<<"再次准备执行checkFileLoopTask";
             QTimer::singleShot(5000, this, SLOT(checkFileLoopTask()));
         }
+
     }
 }

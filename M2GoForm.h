@@ -51,6 +51,8 @@ protected:
 
     void closeEvent(QCloseEvent *e);
 
+    void changeEvent(QEvent *e);
+
 public slots:
     void updateText();
 

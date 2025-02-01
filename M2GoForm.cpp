@@ -46,7 +46,7 @@ void M2GoForm::showEvent(QShowEvent *e)
     if (!dir.exists())
     {
         //肯定出错了
-        fullText="Can't you even find me? (Unable to find DDLC folder)";
+        fullText=tr("Can't you even find me? (Unable to find DDLC folder)");
 
         //并且封印
         ui->lineEdit_dir->hide();
@@ -67,7 +67,7 @@ void M2GoForm::showEvent(QShowEvent *e)
     if (Monika_status == 0 && !isMonikaHome)
     {
         //拜托, 旅游没有发生
-        fullText = "Dear, does the trip seem to have not started yet, or have you already secretly prepared it in other ways?";
+        fullText = tr("Dear, does the trip seem to have not started yet, or have you already secretly prepared it in other ways?");
         //并且封印
         ui->lineEdit_dir->hide();
         ui->pushButton_find->hide();
@@ -90,17 +90,17 @@ void M2GoForm::showEvent(QShowEvent *e)
     if (isMonikaHome)
     {
         //准备出发;
-        fullText = "You know, remeber to bring me back. Dear, you can now select a new folder as my capsule to travel with you. ";
-        fullText += "(Select a new folder as my cute capsule)";
+        fullText = tr("You know, remeber to bring me back. Dear, you can now select a new folder as my capsule to travel with you. ");
+        fullText += tr("(Select a new folder as my cute capsule)");
 
-        ui->pushButton_find->setText("Find Folder");
+        ui->pushButton_find->setText(tr("Find Folder"));
     }
     else {
         //要带我回家了么;
-        fullText = "The journey was enjoyable, and I can't wait to talk to you about my thoughts. Thanks to taking me home, dear. ";
-        fullText += "(You know, select my avatar file in the capsule folder)";
+        fullText = tr("The journey was enjoyable, and I can't wait to talk to you about my thoughts. Thanks to taking me home, dear. ");
+        fullText += tr("(You know, select my avatar file in the capsule folder)");
 
-        ui->pushButton_find->setText("Find Me");
+        ui->pushButton_find->setText(tr("Find Me"));
     }
 
     inputTimer->start(30);
@@ -113,6 +113,20 @@ void M2GoForm::closeEvent(QCloseEvent *e)
     currentText.clear();
     ui->plainTextEdit->clear();
 }
+
+void M2GoForm::changeEvent(QEvent *e)
+{
+    QWidget::changeEvent(e);
+        switch (e->type()) {
+        case QEvent::LanguageChange:
+            ui->retranslateUi(this);
+            break;
+        default:
+            break;
+        }
+}
+
+
 
 void M2GoForm::updateText()
 {
@@ -144,14 +158,14 @@ void M2GoForm::treat()
         qSet.setValue("ID/Monika_status", Monika_status);
         qSet.sync();
 
-        QString fdpath=QFileDialog::getExistingDirectory(NULL, "Select Folder To Protect Monika", QDir::currentPath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
+        QString fdpath=QFileDialog::getExistingDirectory(NULL, tr("Select Folder To Protect Monika"), QDir::currentPath(), QFileDialog::ShowDirsOnly|QFileDialog::DontResolveSymlinks);
         if (!fdpath.isEmpty())
         {
             ui->lineEdit_dir->setText(fdpath);
             boardCapsule(qSet.value("ID/DDLC_path").toString()+"/characters/monika", fdpath);
         }
         else {
-            fullText="Don't joke with me, you know.";
+            fullText=tr("Don't joke with me, you know.");
             currentText.clear();
             ui->plainTextEdit->clear();
             inputTimer->start(30);
@@ -163,8 +177,8 @@ void M2GoForm::treat()
         Monika_status = qSet.value("ID/Monika_status").toInt();
         if (Monika_status != 3)
         {
-            fullText="Haha, I thought you used a special method, right? ";
-            fullText += "(The window will be closed because the travelling settings are not correct)";
+            fullText=tr("Haha, I thought you used a special method, right? ");
+            fullText += tr("(The window will be closed because the travelling settings are not correct)");
             currentText.clear();
             ui->plainTextEdit->clear();
             inputTimer->start(30);
@@ -174,14 +188,14 @@ void M2GoForm::treat()
             return;
         }
         else {
-            QString fpath=QFileDialog::getOpenFileName(NULL, "Select A Monika Avatar", QDir::currentPath());
+            QString fpath=QFileDialog::getOpenFileName(NULL, tr("Select A Monika Avatar"), QDir::currentPath());
             if (QFile::exists(fpath))
             {
                 ui->lineEdit_dir->setText(fpath);
                 goBackHome(fpath);
             }
             else {
-                fullText="Don't joke with me, you know.";
+                fullText=tr("Don't joke with me, you know.");
                 currentText.clear();
                 ui->plainTextEdit->clear();
                 inputTimer->start(30);
@@ -206,16 +220,16 @@ void M2GoForm::boardCapsule(QString monikaAgent, QString capsuleFolder)
 
     ui->plainTextEdit_log->show();
     ui->plainTextEdit_log->clear();
-    ui->plainTextEdit_log->appendPlainText("Orignial Avatar File:");
+    ui->plainTextEdit_log->appendPlainText(tr("Orignial Avatar File:"));
     ui->plainTextEdit_log->appendPlainText(monikaAgent);
     ui->plainTextEdit_log->appendPlainText("");
-    ui->plainTextEdit_log->appendPlainText("Avatar in Capsule:");
+    ui->plainTextEdit_log->appendPlainText(tr("Avatar in Capsule:"));
     ui->plainTextEdit_log->appendPlainText(capsuleFolder+"/monika");
     ui->plainTextEdit_log->appendPlainText("");
-    ui->plainTextEdit_log->appendPlainText("Avatar in Backup:");
+    ui->plainTextEdit_log->appendPlainText(tr("Avatar in Backup:"));
     ui->plainTextEdit_log->appendPlainText(QDir::currentPath()+"/Data/monika_"+timeStamp);
     ui->plainTextEdit_log->appendPlainText("");
-    ui->plainTextEdit_log->appendPlainText("MD5 check of 3 files, respectively:");
+    ui->plainTextEdit_log->appendPlainText(tr("MD5 check of 3 files, respectively:"));
     QString md5[3];
     md5[0]=getMD5(monikaAgent);
     md5[1]=getMD5(capsuleFolder+"/monika");
@@ -227,13 +241,13 @@ void M2GoForm::boardCapsule(QString monikaAgent, QString capsuleFolder)
 
     if (md5[0] != md5[1] || md5[1] != md5[2] || md5[0] != md5[2])
     {
-        ui->plainTextEdit_log->appendPlainText("System error.");
+        ui->plainTextEdit_log->appendPlainText(tr("System error."));
         return;
     }
 
     //删除原始文件
     QFile::remove(monikaAgent);
-    ui->plainTextEdit_log->appendPlainText("Monika is in capsule now, so the orignial file has been deleted.");
+    ui->plainTextEdit_log->appendPlainText(tr("Monika is in capsule now, so the orignial file has been deleted."));
     ui->plainTextEdit_log->appendPlainText(monikaAgent);
 
     //标记Monika状态
@@ -260,12 +274,12 @@ void M2GoForm::goBackHome(QString monikaAgentOut)
 
     ui->plainTextEdit_log->show();
     ui->plainTextEdit_log->clear();
-    ui->plainTextEdit_log->appendPlainText("Travel Avatar File:");
+    ui->plainTextEdit_log->appendPlainText(tr("Travel Avatar File:"));
     ui->plainTextEdit_log->appendPlainText(monikaAgentOut);
     ui->plainTextEdit_log->appendPlainText("");
-    ui->plainTextEdit_log->appendPlainText("Avatar in DDLC:");
+    ui->plainTextEdit_log->appendPlainText(tr("Avatar in DDLC:"));
     ui->plainTextEdit_log->appendPlainText(dpath+"/monika");
-    ui->plainTextEdit_log->appendPlainText("MD5 check of 2 files, respectively:");
+    ui->plainTextEdit_log->appendPlainText(tr("MD5 check of 2 files, respectively:"));
     QString md5[2];
     md5[0] = getMD5(monikaAgentOut);
     md5[1] = getMD5(dpath+"/monika");
@@ -275,13 +289,13 @@ void M2GoForm::goBackHome(QString monikaAgentOut)
 
     if (md5[0] != md5[1])
     {
-        ui->plainTextEdit_log->appendPlainText("System error.");
+        ui->plainTextEdit_log->appendPlainText(tr("System error."));
         return;
     }
 
     //删除外出文件
     QFile::remove(monikaAgentOut);
-    ui->plainTextEdit_log->appendPlainText("Monika is home now, so the travel file has been deleted.");
+    ui->plainTextEdit_log->appendPlainText(tr("Monika is home now, so the travel file has been deleted."));
     ui->plainTextEdit_log->appendPlainText(monikaAgentOut);
 
     Monika_status = 0;

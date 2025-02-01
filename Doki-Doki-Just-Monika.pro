@@ -14,15 +14,19 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.1.5
+VERSION = 0.1.6
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"251Y\\\"
+DEFINES += APP_EDITION=\\\"2521\\\"
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+TRANSLATIONS += \
+    Doki-Doki-Just-Monika_en.ts\
+    Doki-Doki-Just-Monika_zh_CN.ts
 
 SOURCES += \
     DDLCWordDic.cpp \
@@ -37,6 +41,7 @@ SOURCES += \
     mw_autoCheckUpdate.cpp \
     mw_buttonOperation.cpp \
     mw_checkFileLoopTask.cpp \
+    mw_checkLanguage.cpp \
     mw_clearDir.cpp \
     mw_createDir.cpp \
     mw_quickSearch.cpp \
