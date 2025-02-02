@@ -24,8 +24,8 @@ QString OSOperationWin::getCurrentWindowsLocalUsername()
     return userName;
 }
 
-QString OSOperationWin::currentRoamingPath(QString subDirName)
+QString OSOperationWin::currentRoamingPath(QString persistentName)
 {
-    QString path="C:/Users/"+getCurrentWindowsLocalUsername()+"/AppData/Roaming/"+subDirName;
+    QString path="C:/Users/"+getCurrentWindowsLocalUsername()+"/AppData/Roaming/"+persistentName;
     return path.replace("/", "\\");
 }

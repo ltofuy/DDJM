@@ -17,7 +17,7 @@ public:
 
     QString getCurrentWindowsLocalUsername();
 
-    QString currentRoamingPath(QString subDirName);
+    QString currentRoamingPath(QString persistentName);
 };
 
 #endif // OSOPERATIONWIN_H

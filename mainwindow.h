@@ -67,6 +67,8 @@ public:
     int tryLinkMaxCount;
     int tryLinkCount;
 
+
+
 protected:
     void showEvent(QShowEvent *e);
 

@@ -56,6 +56,15 @@ public:
 
     M2GoForm *M2G;
 
+    //win: 获取当前任务列表, 假设大多数玩家是在win启动的MAS
+    QStringList getCurrentProcesses();
+
+    //检查是否当前进程包含DDLC
+    bool checkProcess(QString exeName);
+
+    //true存档时不在弹出对话框;
+    bool isSilentBackup;
+
 private:
     Ui::MASSForm *ui;
 
@@ -81,6 +90,10 @@ public slots:
 
     //制作存档保存
     void makeBackup();
+    //QString makeBackupAndReturnInformation();
+
+    //重置存档
+    void reload();
 };
 
 #endif // MASSFORM_H

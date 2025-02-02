@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.1.6
+VERSION = 0.1.7
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"2521\\\"
+DEFINES += APP_EDITION=\\\"2522\\\"
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -33,6 +33,11 @@ SOURCES += \
     DDWordDialog.cpp \
     M2GoForm.cpp \
     MASSForm.cpp \
+    MASS_check.cpp \
+    MASS_getCurrentProcesses.cpp \
+    MASS_slot_makeBackup.cpp \
+    MASS_slot_reload.cpp \
+    MASS_slot_visitMonika.cpp \
     OSOperationWin.cpp \
     UpdateJsonForm.cpp \
     ez_write_log.cpp \
