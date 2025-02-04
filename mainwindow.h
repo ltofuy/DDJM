@@ -6,8 +6,8 @@
 #include <QLabel>
 #include <QDir>
 #include <QButtonGroup>
-#include <QMediaPlayer>
-#include <QMediaPlaylist>
+//#include <QMediaPlayer>
+//#include <QMediaPlaylist>
 #include <QShowEvent>
 #include <QTimer>
 #include <QFont>
@@ -40,8 +40,8 @@ public:
 
     QMovie *movie;
 
-    QMediaPlayer *mp3Player;
-    QMediaPlaylist *mp3List;
+    //QMediaPlayer *mp3Player;
+    //QMediaPlaylist *mp3List;
 
     QButtonGroup bg;
 

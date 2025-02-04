@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_gif->setMovie(movie);
     movie->start();
 
+    /*
     mp3List = new QMediaPlaylist;
     QString path_bgm=QDir::currentPath()+"/Data/bgm/Leo Young - 静秘语.mp3";
     mp3List->addMedia(QUrl::fromLocalFile(path_bgm));
@@ -30,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     //mp3Player->play();
 
     //qDebug()<<QDir::currentPath()+"/Data/bgm/Leo Young - 静秘语.mp3";
+    */
 
     wordDialog = new DDWordDialog;
     wordDialog->hide();
