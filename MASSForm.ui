@@ -137,7 +137,7 @@ color: rgb(254, 230, 244);
 QTabBar::tab{
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-min-width:120px;
+min-width:60px;
 min-height:30px;
 max-width:240px;
 max-height:30px;
@@ -220,6 +220,124 @@ QScrollBar::sub-line:vertical {
      <string>Ribbon</string>
     </attribute>
     <widget class="QTableWidget" name="tableWidget_ribbon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>510</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: transparent;
+color:white;
+}
+QHeaderView::section{
+background-color: transparent;
+color:white;
+}
+
+QTableCornerButton::section
+{
+background-color: transparent;
+color:white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_hairclip">
+    <attribute name="title">
+     <string>Hairclips</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_hairclip">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>510</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: transparent;
+color:white;
+}
+QHeaderView::section{
+background-color: transparent;
+color:white;
+}
+
+QTableCornerButton::section
+{
+background-color: transparent;
+color:white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_earrings">
+    <attribute name="title">
+     <string>Earrings</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_earring">
      <property name="geometry">
       <rect>
        <x>10</x>

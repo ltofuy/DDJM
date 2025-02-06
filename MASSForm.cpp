@@ -7,32 +7,42 @@ MASSForm::MASSForm(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QVector<QTableWidget*> wList;
+    maxRowCount=256;
+    wList.clear();
+    bgs.clear();
+    allLabels.clear();
+
     wList<<ui->tableWidget_clothes;
     wList<<ui->tableWidget_ribbon;
+    wList<<ui->tableWidget_hairclip;
+    wList<<ui->tableWidget_earring;
     wList<<ui->tableWidget_gifts;
 
-    QVector<QButtonGroup*> bgs;
     bgs<<&bg_clothes;
     bgs<<&bg_ribbon;
+    bgs<<&bg_hairclip;
+    bgs<<&bg_earring;
     bgs<<&bg_gifts;
 
-    QStringList headers=QStringList{"Name", "Code", "Count", "Give"};
+    QStringList headers=QStringList{"Name", "Code", "Count", "Give", "Thumb"};
 
     isSilentBackup = false;
 
     for (int i=0;i<wList.count();++i)
     {
         QTableWidget *w=wList.data()[i];
-        w->setColumnCount(4);
-        w->setRowCount(256);
+        w->setColumnCount(5);
+        w->setRowCount(maxRowCount);
 
         w->setHorizontalHeaderLabels(headers);
 
-        w->setColumnWidth(0, 160);
-        w->setColumnWidth(1, 100);
+        w->setColumnWidth(0, 80);
+        w->setColumnWidth(1, 120);
         w->setColumnWidth(2, 80);
         w->setColumnWidth(3, 80);
+
+        QVector<QLabel*> labels;
+
 
         QButtonGroup *bgc=bgs.data()[i];
 
@@ -42,13 +52,24 @@ MASSForm::MASSForm(QWidget *parent) :
             for (int k=0;k<w->columnCount();++k)
             {
                 w->setItem(j, k, new QTableWidgetItem);
+
             }
 
             QPushButton *b=new QPushButton;
             b->setText("Give");
             w->setCellWidget(j, 3, b);
             bgc->addButton(b, j);
+
+            //建立labels
+            QLabel *l=new QLabel;
+            labels<<l;
+            w->setCellWidget(j, 4, l);
+            l->setGeometry(0, 0, 60, 60);
+            w->setRowHeight(j, 60);
         }
+
+        //录入
+        allLabels<<labels;
     }
 
     //录入clothes
@@ -68,7 +89,6 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_clothes<<QStringList{tr("Shoulderless Sweater"), "shoulderlesssweater"};
     giftCode_clothes<<QStringList{tr("White and Navyblue Dress"), "whiteandnavybluedress"};
     giftCode_clothes<<QStringList{tr("Pink Shirt"), "pinkshirt"};
-    QStringList giftCode_clothes_single;
     for (int i=0;i<giftCode_clothes.count();++i)
     {
         giftCode_clothes_single<<giftCode_clothes.at(i).last();
@@ -91,7 +111,6 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_ribbon<<QStringList{tr("Teal"), "tealribbon"};
     giftCode_ribbon<<QStringList{tr("Yellow"), "yellowribbon"};
     giftCode_ribbon<<QStringList{tr("Ruby"), "rubyribbon"};
-    QStringList giftCode_ribbon_single;
     for (int i=0;i<giftCode_ribbon.count();++i)
     {
         giftCode_ribbon_single<<giftCode_ribbon.at(i).last();
@@ -111,11 +130,12 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_gifts<<QStringList{tr("Fudge"), "fudge"};
     giftCode_gifts<<QStringList{tr("Christmas Cookies"), "christmascookies"};
     giftCode_gifts<<QStringList{tr("Cupcake"), "cupcake"};
-    QStringList giftCode_other_single;
     for (int i=0;i<giftCode_gifts.count();++i)
     {
         giftCode_other_single<<giftCode_gifts.at(i).last();
     }
+
+
 
 
     //初始化设置DDLC文件夹
@@ -145,9 +165,42 @@ MASSForm::MASSForm(QWidget *parent) :
                 !giftCode_ribbon_single.contains(name) &&
                 !giftCode_clothes_single.contains(name))
         {
-            //增加到other中
-            giftCode_gifts<<QStringList{name, name};
-            giftCode_other_single<<name;
+            //增加到对应分类中, 检查这个gift应当属于哪个？
+            QDir dir=info.dir();
+            //dir应当是gifts因此要cdup
+            dir.cdUp();
+            //获取monika目录下的情况
+            dir = QDir(dir.path()+"/mod_assets/monika");
+            switch (appearanceType(dir)) {
+            case 0:
+                //clothes
+                giftCode_clothes<<QStringList{name, name};
+                giftCode_clothes_single<<name;
+                break;
+            case 1:
+                //ribbon
+                giftCode_ribbon<<QStringList{name, name};
+                giftCode_ribbon_single<<name;
+                break;
+            case 2:
+                //hairclip
+                giftCode_hairclip<<QStringList{name, name};
+                giftCode_hairclip_single<<name;
+                break;
+            case 3:
+                //earring
+                giftCode_earring<<QStringList{name, name};
+                giftCode_earring_single<<name;
+                break;
+            default:
+                //others
+                giftCode_gifts<<QStringList{name, name};
+                giftCode_other_single<<name;
+                break;
+            }
+
+            //giftCode_gifts<<QStringList{name, name};
+            //giftCode_other_single<<name;
         }
     }
 
@@ -155,6 +208,8 @@ MASSForm::MASSForm(QWidget *parent) :
     giftStatusConfig=giftStatusPath;
     refreshGiftStatus(giftCode_clothes, giftStatusPath, ui->tableWidget_clothes);
     refreshGiftStatus(giftCode_ribbon, giftStatusPath, ui->tableWidget_ribbon);
+    refreshGiftStatus(giftCode_hairclip, giftStatusPath, ui->tableWidget_hairclip);
+    refreshGiftStatus(giftCode_earring, giftStatusPath, ui->tableWidget_earring);
     refreshGiftStatus(giftCode_gifts, giftStatusPath, ui->tableWidget_gifts);
 
     M2G = new M2GoForm;
@@ -162,6 +217,8 @@ MASSForm::MASSForm(QWidget *parent) :
 
     connect(&bg_clothes, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_clothes(int)));
     connect(&bg_ribbon, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_ribbon(int)));
+    connect(&bg_hairclip, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_ribbon(int)));
+    connect(&bg_earring, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_ribbon(int)));
     connect(&bg_gifts, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_gifts(int)));
 
     connect(ui->pushButton_find, SIGNAL(clicked()), this, SLOT(findDir()));
@@ -198,6 +255,24 @@ void MASSForm::refreshGiftStatus(QVector<QStringList> giftSettings, QString conf
     QSettings qSet(configpath, QSettings::IniFormat);
     qSet.setIniCodec("utf-8");
 
+    int index=wList.indexOf(w);
+    QString sub="";
+    switch (index) {
+    case 0:
+        sub="cloth";
+        break;
+    case 1:
+        sub="ribbon";
+    case 2:
+        sub="hairclip";
+    case 3:
+        sub="earring";
+    default:
+        sub="";
+        break;
+    }
+
+
     for (int i=0;i<w->rowCount();++i)
     {
         if (i<giftSettings.count())
@@ -212,6 +287,43 @@ void MASSForm::refreshGiftStatus(QVector<QStringList> giftSettings, QString conf
             int count = qSet.value("Count/"+code).toInt();
 
             w->item(i, 2)->setText(QString::number(count));
+
+            //处理code
+            code = code.remove(sub+"es");
+            code = code.remove(sub+"s");
+            code = code.remove(sub);
+
+            //抓thumb
+            QString thatPath="";
+            QDir d;
+            for (int j=0; j<giftFileInMods.count();++j)
+            {
+                if (giftFileInMods.at(j).baseName()==code)
+                {
+                    thatPath=giftFileInMods.at(j).filePath();
+                    d = giftFileInMods.at(j).dir();
+                    d.cdUp();
+                    break;
+                }
+            }
+            if (thatPath != "")
+            {
+                d = QDir(d.path()+"/mod_assets/thumbs");
+                QFileInfoList pngs=d.entryInfoList(QDir::Files);
+                for (int k=0;k<pngs.count();++k)
+                {
+                    if (pngs.at(k).baseName().toLower().contains(code))
+                    {
+                        //载入icon
+                        QLabel *ll=allLabels.data()[index].data()[i];
+                        ll->setPixmap(QPixmap(pngs.at(k).filePath()));
+                        ll->setScaledContents(true);
+                        break;
+                    }
+                }
+            }
+
+
         }
         else {
             //隐藏吧
@@ -228,7 +340,16 @@ void MASSForm::buttonOperation_clothes(int a)
 void MASSForm::buttonOperation_ribbon(int a)
 {
     toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_ribbon->item(a, 0)->text(), ui->tableWidget_ribbon->item(a, 1)->text());
+}
 
+void MASSForm::buttonOperation_hairclip(int a)
+{
+    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_hairclip->item(a, 0)->text(), ui->tableWidget_hairclip->item(a, 1)->text());
+}
+
+void MASSForm::buttonOperation_earring(int a)
+{
+    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_earring->item(a, 0)->text(), ui->tableWidget_earring->item(a, 1)->text());
 }
 
 void MASSForm::buttonOperation_gifts(int a)

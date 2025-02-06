@@ -14,7 +14,7 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.1.8
+VERSION = 0.1.9
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_EDITION=\\\"2524\\\"
@@ -33,6 +33,7 @@ SOURCES += \
     DDWordDialog.cpp \
     M2GoForm.cpp \
     MASSForm.cpp \
+    MASS_appearanceType.cpp \
     MASS_check.cpp \
     MASS_getCurrentProcesses.cpp \
     MASS_slot_makeBackup.cpp \
