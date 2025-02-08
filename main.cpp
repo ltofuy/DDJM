@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
         qSet.setValue("Current/Name", QString(APP_NAME));
         qSet.setValue("Current/Edition", QString(APP_EDITION));
-        qSet.setValue("Current/TeamWeb", "https://github.com/ltofuy/DDJM/releases/download/latest");
+        qSet.setValue("Current/TeamWeb", QString(TEAM_WEB));
         qSet.setValue("Current/Version", QString(APP_VERSION));
         qSet.setValue("Current/TimeStamp", QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
 

@@ -38,3 +38,19 @@
 
 2025-02-06 0.1.9
 1. 开始增加了自动分类gift
+
+2025-02-08 0.2.0
+1. 修改了获取更新update.ini的方式
+对于在github上获取update.ini
+对于win:
+https://github.com/ltofuy/DDJM/releases/download/latest/update-win.ini
+对于linux:
+https://github.com/ltofuy/DDJM/releases/download/latest/update-linux.ini
+(尽管目前暂时不会增加linux版本, 但这是为了未来做准备)
+2. 增加对自动更新的屏蔽功能
+在./Config/Doki-Doki-Just-Monika_config.ini下增加或修改键值
+***************
+[Update]
+Auto=false
+***************
+即可屏蔽自动更新

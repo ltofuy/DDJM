@@ -8,6 +8,19 @@ void MainWindow::autoCheckUpdate()
 {
     clearDir(QDir::currentPath()+"/TEMP");
 
+    //会判断更新是否被禁止
+    QSettings qSet(QDir::currentPath()+"/Config/"+QString(APP_NAME)+"_config.ini", QSettings::IniFormat);
+    qSet.setIniCodec("utf-8");
+
+    //若该键不存在, 也会返还false
+    //qDebug()<<qSet.value("aa/bb").toBool();
+    //qDebug()<<qSet.value("aa/bb").toString();
+    if (qSet.value("Update/Auto").toString() != "" && qSet.value("Update/Auto").toBool() == false)
+    {
+        //停止自动更新
+        return;
+    }
+
     checkFilePath = QDir::currentPath()+"/TEMP/update.ini";
     QSettings cSet(QDir::currentPath()+"/Config/update.ini", QSettings::IniFormat);
     cSet.setIniCodec("utf-8");
@@ -16,6 +29,7 @@ void MainWindow::autoCheckUpdate()
     QStringList kitInBin=QStringList{"DownloadKit", "PZip", "EZAutoUpdate"};
     QString workStation="win";
 
+    QString updateIniInGithub="https://github.com/ltofuy/DDJM/releases/download/latest/update.ini";
     //windows
     if (QSysInfo::productType()=="windows")
     {
@@ -23,7 +37,7 @@ void MainWindow::autoCheckUpdate()
 
         //下载latest-tags文件, 以确认是否包含
         //设置项目的update.ini地址
-        QString updateIniInGithub="https://github.com/ltofuy/DDJM/releases/download/latest/update.ini";
+        updateIniInGithub = updateIniInGithub.replace("update.ini", "update-"+workStation+".ini");
 
         bool isKitExistList[kitInBin.count()];
         for (int i=0;i<kitInBin.count();++i)
