@@ -392,6 +392,65 @@ QScrollBar::sub-line:vertical {
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="tab_choker">
+    <attribute name="title">
+     <string>Choker</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_choker">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>510</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: transparent;
+color:white;
+}
+QHeaderView::section{
+background-color: transparent;
+color:white;
+}
+
+QTableCornerButton::section
+{
+background-color: transparent;
+color:white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #D3D3D3;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+ 
+QScrollBar::handle:vertical {
+    background: #888888;
+    min-height: 20px;
+}
+ 
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+ 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: #D3D3D3;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+     </property>
+    </widget>
+   </widget>
    <widget class="QWidget" name="tab_gifts">
     <attribute name="title">
      <string>Other Gifts</string>

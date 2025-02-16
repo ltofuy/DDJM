@@ -35,18 +35,26 @@ public:
     QVector<QStringList> giftCode_ribbon;
     QVector<QStringList> giftCode_hairclip;
     QVector<QStringList> giftCode_earring;
+    QVector<QStringList> giftCode_choker;
     QVector<QStringList> giftCode_gifts;
 
     QStringList giftCode_clothes_single;
     QStringList giftCode_ribbon_single;
     QStringList giftCode_hairclip_single;
     QStringList giftCode_earring_single;
+    QStringList giftCode_choker_single;
     QStringList giftCode_other_single;
+
+    QVector<QStringList> giftAllInfoList;
 
     //保存未录入的gift
     QVector<QStringList> giftCode_gifts_unknown;
 
+    //所有文件信息;
+    QFileInfoList targetsAllInfoList;
+
     QFileInfoList giftFileInMods;
+    QFileInfoList giftJsonInMods;
 
     int maxRowCount;
 
@@ -62,10 +70,12 @@ public:
     QButtonGroup bg_ribbon;
     QButtonGroup bg_hairclip;
     QButtonGroup bg_earring;
+    QButtonGroup bg_choker;
     QButtonGroup bg_gifts;
 
+    QFileInfoList getAllFiles(QString directoryPath);
     QFileInfoList getGiftFiles(QString directoryPath);
-
+    QFileInfoList getGiftJsonFiles(QString directoryPath);
 
     //指定保存的文件, 读取其并刷新当前的送出情况
     void refreshGiftStatus(QVector<QStringList> giftSettings, QString configpath, QTableWidget *w);
@@ -92,6 +102,16 @@ public:
     //4->other
     int appearanceType(QDir dir);
 
+    //判断四否为thumb
+    //type: cloth, ribbon, hairclip, earring, choker, ""
+    //codeO: 原始礼物码
+    //code: 被处理的礼物码, 一般是删除了cloth, ribbon等段
+    bool isThumb(QString typeName, QFileInfo info, QString codeO, QString code, int fileCount);
+
+    //mod的分类只有
+    //("ribbon", "left-hair-clip", "clothes", "earrings", "choker", "left-hair-flower")
+    //判断来自这个的分类是否是否与本机分类相符合
+    bool isMatched(QString modType, QString theType);
 
 private:
     Ui::MASSForm *ui;
@@ -104,6 +124,7 @@ public slots:
     void buttonOperation_ribbon(int a);
     void buttonOperation_hairclip(int a);
     void buttonOperation_earring(int a);
+    void buttonOperation_choker(int a);
     void buttonOperation_gifts(int a);
 
     //通用的函数, 用于写礼物

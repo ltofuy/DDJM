@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.2.0
+VERSION = 0.2.1
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"2528\\\"
+DEFINES += APP_EDITION=\\\"252G\\\"
 
 DEFINES += TEAM_WEB=\\\"https://github.com/ltofuy/DDJM/releases/download/latest\\\"
 
@@ -30,17 +30,24 @@ TRANSLATIONS += \
     Doki-Doki-Just-Monika_en.ts\
     Doki-Doki-Just-Monika_zh_CN.ts
 
+INCLUDEPATH += ./MASSForm
+
 SOURCES += \
     DDLCWordDic.cpp \
     DDWordDialog.cpp \
     M2GoForm.cpp \
-    MASSForm.cpp \
-    MASS_appearanceType.cpp \
-    MASS_check.cpp \
-    MASS_getCurrentProcesses.cpp \
-    MASS_slot_makeBackup.cpp \
-    MASS_slot_reload.cpp \
-    MASS_slot_visitMonika.cpp \
+    MASSForm/MASSForm.cpp \
+    MASSForm/MASS_QFileInfoList_getGiftFiles.cpp \
+    MASSForm/MASS_QStringList_getCurrentProcesses.cpp \
+    MASSForm/MASS_bool_check.cpp \
+    MASSForm/MASS_bool_isMatched.cpp \
+    MASSForm/MASS_bool_isThumb.cpp \
+    MASSForm/MASS_int_appearanceType.cpp \
+    MASSForm/MASS_refreshGiftStatus.cpp \
+    MASSForm/MASS_slot_buttonOperation.cpp \
+    MASSForm/MASS_slot_makeBackup.cpp \
+    MASSForm/MASS_slot_reload.cpp \
+    MASSForm/MASS_slot_visitMonika.cpp \
     OSOperationWin.cpp \
     UpdateJsonForm.cpp \
     ez_write_log.cpp \
@@ -59,7 +66,7 @@ HEADERS += \
     DDLCWordDic.h \
     DDWordDialog.h \
     M2GoForm.h \
-    MASSForm.h \
+    MASSForm/MASSForm.h \
     OSOperationWin.h \
     UpdateJsonForm.h \
     ez_write_log.h \
@@ -68,7 +75,7 @@ HEADERS += \
 FORMS += \
     DDWordDialog.ui \
     M2GoForm.ui \
-    MASSForm.ui \
+    MASSForm/MASSForm.ui \
     UpdateJsonForm.ui \
     mainwindow.ui
 

@@ -16,15 +16,17 @@ MASSForm::MASSForm(QWidget *parent) :
     wList<<ui->tableWidget_ribbon;
     wList<<ui->tableWidget_hairclip;
     wList<<ui->tableWidget_earring;
+    wList<<ui->tableWidget_choker;
     wList<<ui->tableWidget_gifts;
 
     bgs<<&bg_clothes;
     bgs<<&bg_ribbon;
     bgs<<&bg_hairclip;
     bgs<<&bg_earring;
+    bgs<<&bg_choker;
     bgs<<&bg_gifts;
 
-    QStringList headers=QStringList{"Name", "Code", "Count", "Give", "Thumb"};
+    QStringList headers=QStringList{tr("Name"), tr("Code"), tr("Sended"), tr("Send"), tr("Thumb")};
 
     isSilentBackup = false;
 
@@ -40,6 +42,7 @@ MASSForm::MASSForm(QWidget *parent) :
         w->setColumnWidth(1, 120);
         w->setColumnWidth(2, 80);
         w->setColumnWidth(3, 80);
+        w->setColumnWidth(4, 80);
 
         QVector<QLabel*> labels;
 
@@ -56,7 +59,7 @@ MASSForm::MASSForm(QWidget *parent) :
             }
 
             QPushButton *b=new QPushButton;
-            b->setText("Give");
+            b->setText(tr("Send"));
             w->setCellWidget(j, 3, b);
             bgc->addButton(b, j);
 
@@ -64,8 +67,8 @@ MASSForm::MASSForm(QWidget *parent) :
             QLabel *l=new QLabel;
             labels<<l;
             w->setCellWidget(j, 4, l);
-            l->setGeometry(0, 0, 60, 60);
-            w->setRowHeight(j, 60);
+            l->setGeometry(0, 0, 80, 80);
+            w->setRowHeight(j, 80);
         }
 
         //录入
@@ -95,22 +98,22 @@ MASSForm::MASSForm(QWidget *parent) :
     }
 
     //录入ribbon
-    giftCode_ribbon<<QStringList{tr("Black"), "blackribbon"};
-    giftCode_ribbon<<QStringList{tr("Blue"), "blueribbon"};
-    giftCode_ribbon<<QStringList{tr("Dark-Purple"), "darkpurpleribbon"};
-    giftCode_ribbon<<QStringList{tr("Emerald"), "emeraldribbon"};
-    giftCode_ribbon<<QStringList{tr("Gray"), "grayribbon"};
-    giftCode_ribbon<<QStringList{tr("Green"), "greenribbon"};
-    giftCode_ribbon<<QStringList{tr("Light-Purple"), "lightpurpleribbon"};
-    giftCode_ribbon<<QStringList{tr("Peach"), "peachribbon"};
-    giftCode_ribbon<<QStringList{tr("Pink"), "pinkribbon"};
-    giftCode_ribbon<<QStringList{tr("Platinum"), "platinumribbon"};
-    giftCode_ribbon<<QStringList{tr("Red"), "redribbon"};
-    giftCode_ribbon<<QStringList{tr("Sapphire"), "sapphireribbon"};
-    giftCode_ribbon<<QStringList{tr("Silver"), "silverribbon"};
-    giftCode_ribbon<<QStringList{tr("Teal"), "tealribbon"};
-    giftCode_ribbon<<QStringList{tr("Yellow"), "yellowribbon"};
-    giftCode_ribbon<<QStringList{tr("Ruby"), "rubyribbon"};
+    giftCode_ribbon<<QStringList{tr("Black Ribbon"), "blackribbon"};
+    giftCode_ribbon<<QStringList{tr("Blue Ribbon"), "blueribbon"};
+    giftCode_ribbon<<QStringList{tr("Dark-Purple Ribbon"), "darkpurpleribbon"};
+    giftCode_ribbon<<QStringList{tr("Emerald Ribbon"), "emeraldribbon"};
+    giftCode_ribbon<<QStringList{tr("Gray Ribbon"), "grayribbon"};
+    giftCode_ribbon<<QStringList{tr("Green Ribbon"), "greenribbon"};
+    giftCode_ribbon<<QStringList{tr("Light-Purple Ribbon"), "lightpurpleribbon"};
+    giftCode_ribbon<<QStringList{tr("Peach Ribbon"), "peachribbon"};
+    giftCode_ribbon<<QStringList{tr("Pink Ribbon"), "pinkribbon"};
+    giftCode_ribbon<<QStringList{tr("Platinum Ribbon"), "platinumribbon"};
+    giftCode_ribbon<<QStringList{tr("Red Ribbon"), "redribbon"};
+    giftCode_ribbon<<QStringList{tr("Sapphire Ribbon"), "sapphireribbon"};
+    giftCode_ribbon<<QStringList{tr("Silver Ribbon"), "silverribbon"};
+    giftCode_ribbon<<QStringList{tr("Teal Ribbon"), "tealribbon"};
+    giftCode_ribbon<<QStringList{tr("Yellow Ribbon"), "yellowribbon"};
+    giftCode_ribbon<<QStringList{tr("Ruby Ribbon"), "rubyribbon"};
     for (int i=0;i<giftCode_ribbon.count();++i)
     {
         giftCode_ribbon_single<<giftCode_ribbon.at(i).last();
@@ -125,7 +128,7 @@ MASSForm::MASSForm(QWidget *parent) :
     giftCode_gifts<<QStringList{tr("Hot Chocolate"), "hotchocolate"};
     giftCode_gifts<<QStringList{tr("Candycane"), "candycane"};
     giftCode_gifts<<QStringList{tr("Roses"), "roses"};
-    giftCode_gifts<<QStringList{tr("Chocolate"), "chocolate"};
+    giftCode_gifts<<QStringList{tr("Chocolate"), "chocolates"};
     giftCode_gifts<<QStringList{tr("Thermos Mug"), "justmonikathermos"};
     giftCode_gifts<<QStringList{tr("Fudge"), "fudge"};
     giftCode_gifts<<QStringList{tr("Christmas Cookies"), "christmascookies"};
@@ -151,11 +154,80 @@ MASSForm::MASSForm(QWidget *parent) :
     QDir dir_ddlc(ui->lineEdit_dir->text());
     if (dir_ddlc.exists())
     {
+        targetsAllInfoList = getAllFiles(ui->lineEdit_dir->text()+"/spritepacks");
         giftFileInMods = getGiftFiles(ui->lineEdit_dir->text()+"/spritepacks");
+        giftJsonInMods = getGiftJsonFiles(ui->lineEdit_dir->text()+"/spritepacks");
     }
     else {
+        targetsAllInfoList.clear();
+
         giftFileInMods.clear();
+        giftJsonInMods.clear();
     }
+
+
+    //qDebug()<<targetsAllInfoList;
+
+    //处理json数据
+    //QStringList 0: code, 1, group, 2, filename
+    //QVector<QStringList> giftAllInfoList;
+    QStringList allTypes;
+    for (int i=0;i<giftJsonInMods.count();++i)
+    {
+        QString contentTemp="";
+        QFile f(giftJsonInMods.at(i).filePath());
+        if (f.open(QIODevice::Text|QIODevice::ReadOnly))
+        {
+            contentTemp=QString::fromUtf8(f.readAll());
+            f.close();
+        }
+
+        //处理json
+        contentTemp = contentTemp.remove(" ");
+        contentTemp = contentTemp.remove('"');
+        contentTemp = contentTemp.remove(',');
+        QStringList contentList=contentTemp.split("\n");
+        QString thumb, group, giftName;
+        int found = 0;
+        for (int j=0;j<contentList.count();++j)
+        {
+            QString l=contentList.at(j);
+            if (l.startsWith("thumb:"))
+            {
+                thumb = l.remove("thumb:").trimmed();
+                found ++;
+            }
+            if (l.startsWith("group:"))
+            {
+                group = l.remove("group:").trimmed();
+                found ++;
+            }
+            if (l.startsWith("giftname:"))
+            {
+                giftName = l.remove("giftname:").trimmed();
+                found ++;
+            }
+            if (found == 3)
+            {
+                //不再查找;
+                break;
+            }
+        }
+
+        if (found == 3)
+        {
+            //录入信息;
+            giftAllInfoList << QStringList{giftName, group, thumb};
+            //qDebug()<<giftAllInfoList.last();
+            if (!allTypes.contains(group))
+            {
+                allTypes<<group;
+            }
+        }
+    }
+    qDebug()<<"All types: "<<allTypes;
+
+
     //再gifts额外增加
     for (int i=0;i<giftFileInMods.count();++i)
     {
@@ -192,6 +264,11 @@ MASSForm::MASSForm(QWidget *parent) :
                 giftCode_earring<<QStringList{name, name};
                 giftCode_earring_single<<name;
                 break;
+            case 4:
+                //choker
+                giftCode_choker<<QStringList{name, name};
+                giftCode_choker_single<<name;
+                break;
             default:
                 //others
                 giftCode_gifts<<QStringList{name, name};
@@ -210,6 +287,7 @@ MASSForm::MASSForm(QWidget *parent) :
     refreshGiftStatus(giftCode_ribbon, giftStatusPath, ui->tableWidget_ribbon);
     refreshGiftStatus(giftCode_hairclip, giftStatusPath, ui->tableWidget_hairclip);
     refreshGiftStatus(giftCode_earring, giftStatusPath, ui->tableWidget_earring);
+    refreshGiftStatus(giftCode_choker, giftStatusPath, ui->tableWidget_choker);
     refreshGiftStatus(giftCode_gifts, giftStatusPath, ui->tableWidget_gifts);
 
     M2G = new M2GoForm;
@@ -217,8 +295,9 @@ MASSForm::MASSForm(QWidget *parent) :
 
     connect(&bg_clothes, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_clothes(int)));
     connect(&bg_ribbon, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_ribbon(int)));
-    connect(&bg_hairclip, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_ribbon(int)));
-    connect(&bg_earring, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_ribbon(int)));
+    connect(&bg_hairclip, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_hairclip(int)));
+    connect(&bg_earring, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_earring(int)));
+    connect(&bg_choker, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_choker(int)));
     connect(&bg_gifts, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation_gifts(int)));
 
     connect(ui->pushButton_find, SIGNAL(clicked()), this, SLOT(findDir()));
@@ -250,113 +329,7 @@ void MASSForm::changeEvent(QEvent *e)
         }
 }
 
-void MASSForm::refreshGiftStatus(QVector<QStringList> giftSettings, QString configpath, QTableWidget *w)
-{
-    QSettings qSet(configpath, QSettings::IniFormat);
-    qSet.setIniCodec("utf-8");
 
-    int index=wList.indexOf(w);
-    QString sub="";
-    switch (index) {
-    case 0:
-        sub="cloth";
-        break;
-    case 1:
-        sub="ribbon";
-    case 2:
-        sub="hairclip";
-    case 3:
-        sub="earring";
-    default:
-        sub="";
-        break;
-    }
-
-
-    for (int i=0;i<w->rowCount();++i)
-    {
-        if (i<giftSettings.count())
-        {
-            //显示
-            QString code=giftSettings.at(i).at(1);
-            w->setRowHidden(i, false);
-            w->item(i, 0)->setText(giftSettings.at(i).at(0));
-            w->item(i, 1)->setText(code);
-
-            //查找赠送情况
-            int count = qSet.value("Count/"+code).toInt();
-
-            w->item(i, 2)->setText(QString::number(count));
-
-            //处理code
-            code = code.remove(sub+"es");
-            code = code.remove(sub+"s");
-            code = code.remove(sub);
-
-            //抓thumb
-            QString thatPath="";
-            QDir d;
-            for (int j=0; j<giftFileInMods.count();++j)
-            {
-                if (giftFileInMods.at(j).baseName()==code)
-                {
-                    thatPath=giftFileInMods.at(j).filePath();
-                    d = giftFileInMods.at(j).dir();
-                    d.cdUp();
-                    break;
-                }
-            }
-            if (thatPath != "")
-            {
-                d = QDir(d.path()+"/mod_assets/thumbs");
-                QFileInfoList pngs=d.entryInfoList(QDir::Files);
-                for (int k=0;k<pngs.count();++k)
-                {
-                    if (pngs.at(k).baseName().toLower().contains(code))
-                    {
-                        //载入icon
-                        QLabel *ll=allLabels.data()[index].data()[i];
-                        ll->setPixmap(QPixmap(pngs.at(k).filePath()));
-                        ll->setScaledContents(true);
-                        break;
-                    }
-                }
-            }
-
-
-        }
-        else {
-            //隐藏吧
-            w->setRowHidden(i, true);
-        }
-    }
-}
-
-void MASSForm::buttonOperation_clothes(int a)
-{
-    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_clothes->item(a, 0)->text(), ui->tableWidget_clothes->item(a, 1)->text());
-}
-
-void MASSForm::buttonOperation_ribbon(int a)
-{
-    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_ribbon->item(a, 0)->text(), ui->tableWidget_ribbon->item(a, 1)->text());
-}
-
-void MASSForm::buttonOperation_hairclip(int a)
-{
-    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_hairclip->item(a, 0)->text(), ui->tableWidget_hairclip->item(a, 1)->text());
-}
-
-void MASSForm::buttonOperation_earring(int a)
-{
-    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_earring->item(a, 0)->text(), ui->tableWidget_earring->item(a, 1)->text());
-}
-
-void MASSForm::buttonOperation_gifts(int a)
-{
-    toSendGift(ui->lineEdit_dir->text(), ui->tableWidget_gifts->item(a, 0)->text(), ui->tableWidget_gifts->item(a, 1)->text());
-
-}
 
 void MASSForm::toSendGift(QString ddlcDirPath, QString giftName, QString code)
 {
@@ -473,19 +446,4 @@ void MASSForm::refreshMonikaLove()
 }
 
 
-QFileInfoList MASSForm::getGiftFiles(QString directoryPath) {
-    QFileInfoList fileInfoList;
-    QDir dir(directoryPath);
-    if (!dir.exists()) {
-        return fileInfoList; // 返回空列表如果目录不存在
-    }
-    // 查找所有后缀为.gift的文件，递归搜索子目录
-    fileInfoList = dir.entryInfoList(QStringList() << "*.gift", QDir::Files | QDir::NoDotAndDotDot, QDir::Name);
-    // 获取子目录
-    QFileInfoList subDirs = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
-    for (const QFileInfo &subDirInfo : subDirs) {
-        QFileInfoList subFiles = getGiftFiles(subDirInfo.absoluteFilePath());
-        fileInfoList.append(subFiles); // 递归得到的文件添加到列表中
-    }
-    return fileInfoList;
-}
+
