@@ -137,7 +137,7 @@ color: rgb(254, 230, 244);
 QTabBar::tab{
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-min-width:60px;
+min-width:120px;
 min-height:30px;
 max-width:240px;
 max-height:30px;
@@ -161,301 +161,6 @@ background-color: rgb(243, 162, 231);
      <string>Clothes</string>
     </attribute>
     <widget class="QTableWidget" name="tableWidget_clothes">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>510</width>
-       <height>300</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
-background-color: transparent;
-color:white;
-}
-QHeaderView::section{
-background-color: transparent;
-color:white;
-}
-
-QTableCornerButton::section
-{
-background-color: transparent;
-color:white;
-}
-
-QScrollBar:vertical {
-    border: none;
-    background: #D3D3D3;
-    width: 10px;
-    margin: 15px 0 15px 0;
-}
- 
-QScrollBar::handle:vertical {
-    background: #888888;
-    min-height: 20px;
-}
- 
-QScrollBar::add-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
- 
-QScrollBar::sub-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_ribbon">
-    <attribute name="title">
-     <string>Ribbon</string>
-    </attribute>
-    <widget class="QTableWidget" name="tableWidget_ribbon">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>510</width>
-       <height>300</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
-background-color: transparent;
-color:white;
-}
-QHeaderView::section{
-background-color: transparent;
-color:white;
-}
-
-QTableCornerButton::section
-{
-background-color: transparent;
-color:white;
-}
-
-QScrollBar:vertical {
-    border: none;
-    background: #D3D3D3;
-    width: 10px;
-    margin: 15px 0 15px 0;
-}
- 
-QScrollBar::handle:vertical {
-    background: #888888;
-    min-height: 20px;
-}
- 
-QScrollBar::add-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
- 
-QScrollBar::sub-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_hairclip">
-    <attribute name="title">
-     <string>Hairclips</string>
-    </attribute>
-    <widget class="QTableWidget" name="tableWidget_hairclip">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>510</width>
-       <height>300</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
-background-color: transparent;
-color:white;
-}
-QHeaderView::section{
-background-color: transparent;
-color:white;
-}
-
-QTableCornerButton::section
-{
-background-color: transparent;
-color:white;
-}
-
-QScrollBar:vertical {
-    border: none;
-    background: #D3D3D3;
-    width: 10px;
-    margin: 15px 0 15px 0;
-}
- 
-QScrollBar::handle:vertical {
-    background: #888888;
-    min-height: 20px;
-}
- 
-QScrollBar::add-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
- 
-QScrollBar::sub-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_earrings">
-    <attribute name="title">
-     <string>Earrings</string>
-    </attribute>
-    <widget class="QTableWidget" name="tableWidget_earring">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>510</width>
-       <height>300</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
-background-color: transparent;
-color:white;
-}
-QHeaderView::section{
-background-color: transparent;
-color:white;
-}
-
-QTableCornerButton::section
-{
-background-color: transparent;
-color:white;
-}
-
-QScrollBar:vertical {
-    border: none;
-    background: #D3D3D3;
-    width: 10px;
-    margin: 15px 0 15px 0;
-}
- 
-QScrollBar::handle:vertical {
-    background: #888888;
-    min-height: 20px;
-}
- 
-QScrollBar::add-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
- 
-QScrollBar::sub-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_choker">
-    <attribute name="title">
-     <string>Choker</string>
-    </attribute>
-    <widget class="QTableWidget" name="tableWidget_choker">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>510</width>
-       <height>300</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
-background-color: transparent;
-color:white;
-}
-QHeaderView::section{
-background-color: transparent;
-color:white;
-}
-
-QTableCornerButton::section
-{
-background-color: transparent;
-color:white;
-}
-
-QScrollBar:vertical {
-    border: none;
-    background: #D3D3D3;
-    width: 10px;
-    margin: 15px 0 15px 0;
-}
- 
-QScrollBar::handle:vertical {
-    background: #888888;
-    min-height: 20px;
-}
- 
-QScrollBar::add-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
- 
-QScrollBar::sub-line:vertical {
-    border: none;
-    background: #D3D3D3;
-    height: 0px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_gifts">
-    <attribute name="title">
-     <string>Other Gifts</string>
-    </attribute>
-    <widget class="QTableWidget" name="tableWidget_gifts">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -777,6 +482,53 @@ border-bottom-right-radius:4px
    </property>
    <property name="text">
     <string>Reload</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_open_folder">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Open Folder</string>
    </property>
   </widget>
  </widget>

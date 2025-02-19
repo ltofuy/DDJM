@@ -40,6 +40,8 @@ public:
 
     QMovie *movie;
 
+    QString latestVersion;
+
     //QMediaPlayer *mp3Player;
     //QMediaPlaylist *mp3List;
 
@@ -67,7 +69,20 @@ public:
     int tryLinkMaxCount;
     int tryLinkCount;
 
+    //是否在检查下载情况
+    bool isCheckingDownload;
 
+    //检查下载每5s一次, 检查文件是否
+    int checkingDownloadMax=100;
+
+    //记录当前
+    int checkingDownloadCurrent=0;
+
+    //间隔
+    int checkingDownloadTimeStep=5000;
+
+    //downloadKit指定的任务名称
+    QString DownloadKit_taskName="";
 
 protected:
     void showEvent(QShowEvent *e);
@@ -92,5 +107,11 @@ public slots:
 
     //检查翻译
     void checkLanguage();
+
+    //下载
+    void download(QString url, QString targetFilepath);
+
+    //专用于DownloadKit的checking, 检查目标日志
+    void checkingDownloadKitWork();
 };
 #endif // MAINWINDOW_H

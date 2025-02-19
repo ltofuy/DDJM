@@ -58,5 +58,51 @@ void MainWindow::buttonOperation(int a)
         //quickSearch
         quickSearch();
         break;
+    case 20:
+        //get mas
+    {
+        //如果已经设置了MAS会提醒用户是否继续
+        //记录当前最新版本
+        QString starter_url="";
+        if (QSysInfo::productType() == "windows")
+        {
+            starter_url = "https://github.com/Monika-After-Story/MonikaModDev/releases/download/v0.12.10/mas-installer.exe";
+        }
+        else if (QSysInfo::productType() == "linux"){
+            starter_url = "https://github.com/Monika-After-Story/MonikaModDev/releases/download/v0.12.10/mas-installer-linux";
+        }
+        else if (QSysInfo::productType() == "osx"){
+            starter_url = "https://github.com/Monika-After-Story/MonikaModDev/releases/download/v0.12.10/mas-installer-mac";
+        }
+        else {
+            QMessageBox::warning(NULL, tr("Unknown workstation"),
+                                 tr("Perhaps you are running in an unknown workstation, the following operations are ended."),
+                    QMessageBox::Ok);
+            return;
+        }
+        //若存在则下载
+        download(starter_url, "./TEMP/"+starter_url.split("/").last());
+    }
+        break;
+    case 21:
+        //get mas cn
+    {
+        //如果已经设置了MAS会提醒用户是否继续
+        //记录当前最新版本
+        QString starter_url="";
+        if (QSysInfo::productType() == "windows")
+        {
+            starter_url = "https://github.com/Mon1-innovation/MASToolScript/releases/download/0.0.12/MasInstaller.exe";
+        }
+        else {
+            QMessageBox::warning(NULL, tr("Unknown workstation"),
+                                 tr("Perhaps you are running in an unknown workstation, the following operations are ended."),
+                    QMessageBox::Ok);
+            return;
+        }
+        //若存在则下载
+        download(starter_url, "./TEMP/"+starter_url.split("/").last());
+    }
+        break;
     }
 }

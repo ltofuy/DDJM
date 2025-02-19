@@ -20,6 +20,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_gif->setMovie(movie);
     movie->start();
 
+    latestVersion = "0.12.15";
+
+    isCheckingDownload=false;
+
     /*
     mp3List = new QMediaPlaylist;
     QString path_bgm=QDir::currentPath()+"/Data/bgm/Leo Young - 静秘语.mp3";
@@ -66,6 +70,10 @@ MainWindow::MainWindow(QWidget *parent)
     bg.addButton(ui->pushButton_word_Monika, 3);
 
     bg.addButton(ui->pushButton_find_word, 10);
+
+
+    bg.addButton(ui->pushButton_get_mas, 20);
+    bg.addButton(ui->pushButton_get_mas_cn, 21);
 
     connect(&bg, SIGNAL(buttonClicked(int)), this, SLOT(buttonOperation(int)));
 

@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.2.1
+VERSION = 0.2.2
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"252G\\\"
+DEFINES += APP_EDITION=\\\"252K\\\"
 
 DEFINES += TEAM_WEB=\\\"https://github.com/ltofuy/DDJM/releases/download/latest\\\"
 
@@ -38,16 +38,19 @@ SOURCES += \
     M2GoForm.cpp \
     MASSForm/MASSForm.cpp \
     MASSForm/MASS_QFileInfoList_getGiftFiles.cpp \
+    MASSForm/MASS_QJsonObject_loadJson.cpp \
     MASSForm/MASS_QStringList_getCurrentProcesses.cpp \
     MASSForm/MASS_bool_check.cpp \
     MASSForm/MASS_bool_isMatched.cpp \
     MASSForm/MASS_bool_isThumb.cpp \
     MASSForm/MASS_int_appearanceType.cpp \
-    MASSForm/MASS_refreshGiftStatus.cpp \
     MASSForm/MASS_slot_buttonOperation.cpp \
     MASSForm/MASS_slot_makeBackup.cpp \
+    MASSForm/MASS_slot_openDDLCFolder.cpp \
+    MASSForm/MASS_slot_refreshGiftStatus.cpp \
     MASSForm/MASS_slot_reload.cpp \
     MASSForm/MASS_slot_visitMonika.cpp \
+    MASSForm/MASS_toSendGift.cpp \
     OSOperationWin.cpp \
     UpdateJsonForm.cpp \
     ez_write_log.cpp \
@@ -59,6 +62,7 @@ SOURCES += \
     mw_checkLanguage.cpp \
     mw_clearDir.cpp \
     mw_createDir.cpp \
+    mw_download.cpp \
     mw_quickSearch.cpp \
     mw_showMASSupport.cpp
 

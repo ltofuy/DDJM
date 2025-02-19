@@ -11,8 +11,11 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QProcess>
-
-
+#include <QDesktopServices>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QPoint>
 
 #include "M2GoForm.h"
 
@@ -30,34 +33,21 @@ public:
     explicit MASSForm(QWidget *parent = nullptr);
     ~MASSForm();
 
-    //存储礼物代码 0-name, 1-code
-    QVector<QStringList> giftCode_clothes;
-    QVector<QStringList> giftCode_ribbon;
-    QVector<QStringList> giftCode_hairclip;
-    QVector<QStringList> giftCode_earring;
-    QVector<QStringList> giftCode_choker;
-    QVector<QStringList> giftCode_gifts;
-
-    QStringList giftCode_clothes_single;
-    QStringList giftCode_ribbon_single;
-    QStringList giftCode_hairclip_single;
-    QStringList giftCode_earring_single;
-    QStringList giftCode_choker_single;
-    QStringList giftCode_other_single;
-
-    QVector<QStringList> giftAllInfoList;
-
-    //保存未录入的gift
-    QVector<QStringList> giftCode_gifts_unknown;
-
     //所有文件信息;
-    QFileInfoList targetsAllInfoList;
-
-    QFileInfoList giftFileInMods;
     QFileInfoList giftJsonInMods;
+    //所有thumb信息
+    QFileInfoList thumbFileList;
 
+    //不再需要旧的内容, 直接使用新的进行初始化
+    //使用如下的就够了
+    //每个QStringList 0:code, 1:group, 2:thumb, 3:display, 4 精确地址
+    QVector<QStringList> giftAllInfoList;
+    QStringList allTypes;
+
+    //每个分类的最大个数
     int maxRowCount;
 
+    //涉及所有分类的部分
     //所有的tableWidgets
     QVector<QTableWidget*> wList;
     //所有的buttonGroups
@@ -65,20 +55,12 @@ public:
     //所有的Labels
     QVector<QVector<QLabel*>> allLabels;
 
-    //礼物的bg
-    QButtonGroup bg_clothes;
-    QButtonGroup bg_ribbon;
-    QButtonGroup bg_hairclip;
-    QButtonGroup bg_earring;
-    QButtonGroup bg_choker;
-    QButtonGroup bg_gifts;
-
     QFileInfoList getAllFiles(QString directoryPath);
     QFileInfoList getGiftFiles(QString directoryPath);
     QFileInfoList getGiftJsonFiles(QString directoryPath);
 
-    //指定保存的文件, 读取其并刷新当前的送出情况
-    void refreshGiftStatus(QVector<QStringList> giftSettings, QString configpath, QTableWidget *w);
+    //单独涉及ui操作的按钮
+    QButtonGroup bgUI;
 
     //指定存储配置文件
     QString giftStatusConfig;
@@ -94,7 +76,7 @@ public:
     //true存档时不在弹出对话框;
     bool isSilentBackup;
 
-    //依据目录判断类型
+    // 【作废】依据目录判断类型
     //0->clothes
     //1->ribbon
     //2->hairclip
@@ -102,16 +84,22 @@ public:
     //4->other
     int appearanceType(QDir dir);
 
-    //判断四否为thumb
+    // 【作废】判断四否为thumb
     //type: cloth, ribbon, hairclip, earring, choker, ""
     //codeO: 原始礼物码
     //code: 被处理的礼物码, 一般是删除了cloth, ribbon等段
     bool isThumb(QString typeName, QFileInfo info, QString codeO, QString code, int fileCount);
 
-    //mod的分类只有
+    // 【作废】mod的分类只有
     //("ribbon", "left-hair-clip", "clothes", "earrings", "choker", "left-hair-flower")
     //判断来自这个的分类是否是否与本机分类相符合
     bool isMatched(QString modType, QString theType);
+
+    //需要一个读取json的数据结果
+    QVector<QJsonObject> jsonObjects;
+
+    //读取json
+    QJsonObject loadJson(QString jsonfilepath);
 
 private:
     Ui::MASSForm *ui;
@@ -120,12 +108,9 @@ protected:
     void changeEvent(QEvent *e);
 
 public slots:
-    void buttonOperation_clothes(int a);
-    void buttonOperation_ribbon(int a);
-    void buttonOperation_hairclip(int a);
-    void buttonOperation_earring(int a);
-    void buttonOperation_choker(int a);
-    void buttonOperation_gifts(int a);
+    void buttonOperationGiftSended(int a);
+
+    void buttonOperation(int a);
 
     //通用的函数, 用于写礼物
     void toSendGift(QString ddlcDirPath, QString giftName, QString code);
@@ -139,12 +124,18 @@ public slots:
     //启动DDLC
     void visitMonika();
 
+    //打开DDLC所在文件夹
+    void openDDLCFolder();
+
     //制作存档保存
     void makeBackup();
     //QString makeBackupAndReturnInformation();
 
     //重置存档
     void reload();
+
+    //指定保存的文件, 读取其并刷新当前的送出情况
+    void refreshGiftStatus(int a);
 };
 
 #endif // MASSFORM_H

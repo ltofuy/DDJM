@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-
 //本来只想开一个小坑, 没想到给自己挖了个大坑ε=(´ο｀*)))唉
 //但考虑到是为了Monika那算了~无妨
 void MainWindow::autoCheckUpdate()
