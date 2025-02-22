@@ -62,11 +62,14 @@
    <widget class="QPushButton" name="pushButton_word_Sayori">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>90</y>
-      <width>120</width>
+      <x>40</x>
+      <y>240</y>
+      <width>160</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Check poem words for Sayori.</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -109,11 +112,14 @@ border-bottom-right-radius:4px
    <widget class="QPushButton" name="pushButton_word_Yuri">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>40</y>
-      <width>120</width>
+      <x>40</x>
+      <y>280</y>
+      <width>160</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Check poem words for Yuri.</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -156,11 +162,14 @@ border-bottom-right-radius:4px
    <widget class="QPushButton" name="pushButton_word_Natsuki">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>40</y>
-      <width>120</width>
+      <x>40</x>
+      <y>320</y>
+      <width>160</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Check poem words for Natsuki.</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -203,11 +212,14 @@ border-bottom-right-radius:4px
    <widget class="QPushButton" name="pushButton_word_Monika">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>90</y>
-      <width>120</width>
+      <x>40</x>
+      <y>360</y>
+      <width>160</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Check poem words for Monika.</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -304,6 +316,9 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
       <width>100</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Check which girl the current word belongs to. Help you in DDLC word-selecting or the Hang-Man game in MAS.</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -412,6 +427,9 @@ If the work infringes on your intellectual property rights, please contact the a
       <height>30</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Show/hide the MAS support plugin!</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(200, 142, 245);
 font: 16px &quot;Bauhaus 93&quot;;</string>
@@ -433,9 +451,9 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
    <widget class="QLabel" name="label_find_bg_2">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>700</x>
       <y>80</y>
-      <width>280</width>
+      <width>551</width>
       <height>50</height>
      </rect>
     </property>
@@ -449,11 +467,14 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
    <widget class="QPushButton" name="pushButton_get_mas_cn">
     <property name="geometry">
      <rect>
-      <x>970</x>
-      <y>40</y>
-      <width>90</width>
+      <x>840</x>
+      <y>90</y>
+      <width>100</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Auto download the MAS-CN starter program to ./TEMP (Chinese Language only)</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -496,11 +517,14 @@ border-bottom-right-radius:4px
    <widget class="QPushButton" name="pushButton_get_mas">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>40</y>
-      <width>90</width>
+      <x>710</x>
+      <y>90</y>
+      <width>100</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Auto download the MAS starter program to ./TEMP (English Language only)</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -559,10 +583,6 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
    </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
-   <zorder>pushButton_word_Sayori</zorder>
-   <zorder>pushButton_word_Yuri</zorder>
-   <zorder>pushButton_word_Natsuki</zorder>
-   <zorder>pushButton_word_Monika</zorder>
    <zorder>label_gif</zorder>
    <zorder>label_find_bg</zorder>
    <zorder>lineEdit_findword</zorder>
@@ -577,6 +597,10 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
    <zorder>pushButton_get_mas</zorder>
    <zorder>checkBox_MAS</zorder>
    <zorder>label_4</zorder>
+   <zorder>pushButton_word_Monika</zorder>
+   <zorder>pushButton_word_Natsuki</zorder>
+   <zorder>pushButton_word_Sayori</zorder>
+   <zorder>pushButton_word_Yuri</zorder>
   </widget>
  </widget>
  <customwidgets>

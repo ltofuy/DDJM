@@ -54,3 +54,10 @@ https://github.com/ltofuy/DDJM/releases/download/latest/update-linux.ini
 Auto=false
 ***************
 即可屏蔽自动更新
+
+2025-02-22 0.2.3
+1. 更新了翻译
+2. 更新了自动更新组件
+3. 增加了获取MAS，包括中文版的方法
+4. 解决了thumb显示问题
+5. 在部分电脑上打开DDLC文件夹不能成功的问题得到了解决

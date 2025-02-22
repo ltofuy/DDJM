@@ -8,6 +8,11 @@ void MASSForm::makeBackup()
     //制作存档保存;
     if (QSysInfo::productType() != "windows")
     {
+        //Linux下获取用于名
+        QString userName = qgetenv("USER");
+
+        // /home/[user]/.renpy/Monika After Story
+
         content += "Wait for a function update for non-windows platforms";
         if (isSilentBackup == false)
         {

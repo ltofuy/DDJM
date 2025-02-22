@@ -139,6 +139,7 @@ MASSForm::MASSForm(QWidget *parent) :
 
             QPushButton *b=new QPushButton;
             b->setText(tr("Send"));
+            b->setToolTip(tr("Send the gift to Monika"));
             w->setCellWidget(j, 3, b);
             //为了保证检索可用, 检索值应当为j+indexRow*maxRowCount
             //以确保所有的bgc都可以用1个函数来检索
@@ -159,6 +160,8 @@ MASSForm::MASSForm(QWidget *parent) :
         //使用重写的refreshGiftStatus
         refreshGiftStatus(i);
     }
+
+    //这里做一个判断, 如果DDLC文件夹存在, 且依据是否存在Monika化身对M2G的
 
 
     M2G = new M2GoForm;

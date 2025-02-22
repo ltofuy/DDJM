@@ -49,6 +49,9 @@
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
             <widget class="QCheckBox" name="checkBox_re_1">
+             <property name="toolTip">
+              <string>Click to enable/disable the match expression mode</string>
+             </property>
              <property name="text">
               <string>Match Expression</string>
              </property>
@@ -82,10 +85,17 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_1"/>
+            <widget class="QSpinBox" name="spinBox_1">
+             <property name="toolTip">
+              <string>Length of a word. For example, 'happy' has a length of 5.</string>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_check_1">
+             <property name="toolTip">
+              <string>Find all words under the current conditions</string>
+             </property>
              <property name="text">
               <string>Check</string>
              </property>
@@ -106,6 +116,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_reset_1">
+             <property name="toolTip">
+              <string>Reset the word list to the initial status</string>
+             </property>
              <property name="text">
               <string>Reset</string>
              </property>
@@ -127,6 +140,9 @@
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
             <widget class="QCheckBox" name="checkBox_re_2">
+             <property name="toolTip">
+              <string>Click to enable/disable the match expression mode</string>
+             </property>
              <property name="text">
               <string>Match Expression</string>
              </property>
@@ -160,10 +176,17 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_2"/>
+            <widget class="QSpinBox" name="spinBox_2">
+             <property name="toolTip">
+              <string>Length of a word. For example, 'happy' has a length of 5.</string>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_check_2">
+             <property name="toolTip">
+              <string>Find all words under the current conditions</string>
+             </property>
              <property name="text">
               <string>Check</string>
              </property>
@@ -184,6 +207,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_reset_2">
+             <property name="toolTip">
+              <string>Reset the word list to the initial status</string>
+             </property>
              <property name="text">
               <string>Reset</string>
              </property>

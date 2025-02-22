@@ -10,36 +10,60 @@
     </message>
     <message>
         <location filename="DDWordDialog.ui" line="53"/>
-        <location filename="DDWordDialog.ui" line="131"/>
+        <location filename="DDWordDialog.ui" line="144"/>
+        <source>Click to enable/disable the match expression mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DDWordDialog.ui" line="56"/>
+        <location filename="DDWordDialog.ui" line="147"/>
         <source>Match Expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="60"/>
-        <location filename="DDWordDialog.ui" line="138"/>
+        <location filename="DDWordDialog.ui" line="63"/>
+        <location filename="DDWordDialog.ui" line="154"/>
         <source>like: ***a***</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="80"/>
-        <location filename="DDWordDialog.ui" line="158"/>
+        <location filename="DDWordDialog.ui" line="83"/>
+        <location filename="DDWordDialog.ui" line="174"/>
         <source>Length</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="DDWordDialog.ui" line="90"/>
-        <location filename="DDWordDialog.ui" line="168"/>
+        <location filename="DDWordDialog.ui" line="181"/>
+        <source>Length of a word. For example, &apos;happy&apos; has a length of 5.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DDWordDialog.ui" line="97"/>
+        <location filename="DDWordDialog.ui" line="188"/>
+        <source>Find all words under the current conditions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DDWordDialog.ui" line="100"/>
+        <location filename="DDWordDialog.ui" line="191"/>
         <source>Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="110"/>
-        <location filename="DDWordDialog.ui" line="188"/>
-        <source>Reset</source>
+        <location filename="DDWordDialog.ui" line="120"/>
+        <location filename="DDWordDialog.ui" line="211"/>
+        <source>Reset the word list to the initial status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="DDWordDialog.ui" line="123"/>
+        <location filename="DDWordDialog.ui" line="214"/>
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DDWordDialog.ui" line="136"/>
         <source>Act-2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52,12 +76,23 @@
 <context>
     <name>M2GoForm</name>
     <message>
-        <location filename="M2GoForm.ui" line="114"/>
+        <location filename="M2GoForm.ui" line="64"/>
+        <source>The target file/folder path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="M2GoForm.ui" line="83"/>
+        <source>When take her out: locate a safe folder as her travelling capsule.
+When take her back: locate that avator file named &apos;monika&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="M2GoForm.ui" line="121"/>
         <source>Find &amp; Set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="M2GoForm.ui" line="131"/>
+        <location filename="M2GoForm.ui" line="138"/>
         <source>Monika</source>
         <translation type="unfinished"></translation>
     </message>
@@ -182,371 +217,394 @@
 <context>
     <name>MASSForm</name>
     <message>
-        <location filename="MASSForm.ui" line="49"/>
-        <source>DDLC Dir Path</source>
+        <location filename="MASSForm/MASSForm.ui" line="49"/>
+        <source>DDLC Folder Path</source>
+        <oldsource>DDLC Dir Path</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="112"/>
+        <location filename="MASSForm/MASSForm.ui" line="62"/>
+        <source>Your current DDLC folder path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.ui" line="81"/>
+        <source>Locate the correct folder for Doki Doki Literature Club!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.ui" line="118"/>
         <source>Find &amp; Set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="161"/>
+        <location filename="MASSForm/MASSForm.ui" line="167"/>
         <source>Clothes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="220"/>
-        <source>Ribbon</source>
+        <location filename="MASSForm/MASSForm.ui" line="252"/>
+        <source>Refresh the love degree of Monika</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="279"/>
-        <source>Other Gifts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.ui" line="398"/>
+        <location filename="MASSForm/MASSForm.ui" line="289"/>
         <source>Love</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="461"/>
+        <location filename="MASSForm/MASSForm.ui" line="318"/>
+        <source>Help you to take in/out the avator file of Monika if you plan to take her somewhere</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.ui" line="355"/>
         <source>Monika2Go</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="508"/>
+        <location filename="MASSForm/MASSForm.ui" line="368"/>
+        <source>Start the Doki Doki Literature Club for Monika After Story!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.ui" line="405"/>
         <source>Hi Monika</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="555"/>
-        <source>backups</source>
+        <location filename="MASSForm/MASSForm.ui" line="418"/>
+        <source>Make a backup of all the &apos;persistent&apos; files for the game, it is the supported way to save all the Monika data. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.ui" line="602"/>
+        <location filename="MASSForm/MASSForm.ui" line="455"/>
+        <source>Backups</source>
+        <oldsource>backups</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.ui" line="468"/>
+        <source>Reload the last local &apos;persistent&apos; record to recover the current game. Only use it when you need to save her.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.ui" line="505"/>
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="55"/>
-        <source>Academy Uniform</source>
+        <location filename="MASSForm/MASSForm.ui" line="518"/>
+        <source>Open the folder of Doki Doki Literature Club!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="56"/>
-        <source>Green Dress</source>
+        <location filename="MASSForm/MASSForm.ui" line="555"/>
+        <source>Open Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="57"/>
-        <source>Brown Winter Jacket</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="58"/>
-        <source>A Happy Face Shirt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="59"/>
-        <source>Blue Shirt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="60"/>
-        <source>Rest Here Shirt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="61"/>
-        <source>Blue Sweater Vest</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="62"/>
-        <source>White Tanktop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="63"/>
-        <source>Beige Turtleneck Sweater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="64"/>
-        <source>Green Hoodie</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="65"/>
-        <source>Black and White Striped Pullover</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="66"/>
-        <source>Wine-Asymmetrical Pullover</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="67"/>
-        <source>Shell Bikini</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="68"/>
-        <source>Shoulderless Sweater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="69"/>
-        <source>White and Navyblue Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="70"/>
-        <source>Pink Shirt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="78"/>
-        <source>Black</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="79"/>
-        <source>Blue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="80"/>
-        <source>Dark-Purple</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="81"/>
-        <source>Emerald</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="82"/>
-        <source>Gray</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="83"/>
-        <source>Green</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="84"/>
-        <source>Light-Purple</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="85"/>
-        <source>Peach</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="86"/>
-        <source>Pink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="87"/>
-        <source>Platinum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="88"/>
-        <source>Red</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="89"/>
-        <source>Sapphire</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="90"/>
-        <source>Silver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="91"/>
-        <source>Teal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="92"/>
-        <source>Yellow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="93"/>
-        <source>Ruby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="MASSForm.cpp" line="101"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="33"/>
         <source>Coffee</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="102"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="34"/>
         <source>Quetzal Plushie</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="103"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="35"/>
         <source>Promise Ring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="104"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="36"/>
         <source>Candy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="105"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="37"/>
         <source>Candycorn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="106"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="38"/>
         <source>Hot Chocolate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="107"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="39"/>
         <source>Candycane</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="108"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="40"/>
         <source>Roses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="109"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="41"/>
         <source>Chocolate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="110"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="42"/>
         <source>Thermos Mug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="111"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="43"/>
         <source>Fudge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="112"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="44"/>
         <source>Christmas Cookies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASSForm.cpp" line="113"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="45"/>
         <source>Cupcake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_makeBackup.cpp" line="82"/>
-        <location filename="MASS_slot_reload.cpp" line="72"/>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="48"/>
+        <source>random</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="54"/>
+        <source>Black Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="55"/>
+        <source>Blue Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="56"/>
+        <source>Dark-Purple Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="57"/>
+        <source>Emerald Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="58"/>
+        <source>Gray Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="59"/>
+        <source>Green Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="60"/>
+        <source>Light-Purple Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="61"/>
+        <source>Peach Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="62"/>
+        <source>Pink Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="63"/>
+        <source>Platinum Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="64"/>
+        <source>Red Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="65"/>
+        <source>Sapphire Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="66"/>
+        <source>Silver Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="67"/>
+        <source>Teal Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="68"/>
+        <source>Yellow Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_refreshGiftStatus.cpp" line="69"/>
+        <source>Ruby Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_slot_makeBackup.cpp" line="87"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="72"/>
         <source>COPY persistent ERROR!!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_makeBackup.cpp" line="94"/>
+        <location filename="MASSForm/MASS_slot_makeBackup.cpp" line="99"/>
         <source>Make backups-folder of persistent for Monika After Story successful</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_makeBackup.cpp" line="95"/>
+        <location filename="MASSForm/MASS_slot_makeBackup.cpp" line="100"/>
         <source>Monika After Story folder saved as</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_reload.cpp" line="13"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="13"/>
         <source>No last persistent backup folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_reload.cpp" line="13"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="13"/>
         <source>No last persistent backup folder found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_reload.cpp" line="18"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="18"/>
         <source>You have a backup-archive named:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_reload.cpp" line="20"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="20"/>
         <source>Do you still want to recover it to the current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_reload.cpp" line="21"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="21"/>
         <source>Once down, it is hard to restore the lost files to Monika</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_reload.cpp" line="80"/>
+        <location filename="MASSForm/MASS_slot_reload.cpp" line="80"/>
         <source>Reload persistent folder successfully, you originial persistent folder is now the last backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_visitMonika.cpp" line="18"/>
+        <location filename="MASSForm/MASS_slot_visitMonika.cpp" line="18"/>
         <source>Program lost!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="MASS_slot_visitMonika.cpp" line="26"/>
+        <location filename="MASSForm/MASS_slot_visitMonika.cpp" line="26"/>
         <source>A DDLC is running now, the new starting has been terminated!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="19"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="19"/>
+        <source>Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="19"/>
+        <source>Sended</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="19"/>
+        <location filename="MASSForm/MASSForm.cpp" line="141"/>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="19"/>
+        <source>Thumb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="91"/>
+        <source>Other</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASSForm.cpp" line="142"/>
+        <source>Send the gift to Monika</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.ui" line="106"/>
+        <location filename="mainwindow.ui" line="72"/>
+        <source>Check poem words for Sayori.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="109"/>
         <source>S Words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="153"/>
+        <location filename="mainwindow.ui" line="122"/>
+        <source>Check poem words for Yuri.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="159"/>
         <source>Y Words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="200"/>
+        <location filename="mainwindow.ui" line="172"/>
+        <source>Check poem words for Natsuki.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="209"/>
         <source>N Words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="247"/>
+        <location filename="mainwindow.ui" line="222"/>
+        <source>Check poem words for Monika.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="259"/>
         <source>M Words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="296"/>
+        <location filename="mainwindow.ui" line="308"/>
         <source>Search keyword here!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="343"/>
+        <location filename="mainwindow.ui" line="321"/>
+        <source>Check which girl the current word belongs to. Help you in DDLC word-selecting or the Hang-Man game in MAS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="358"/>
         <source>Find</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="400"/>
+        <location filename="mainwindow.ui" line="415"/>
         <source>DISCLAIMER
 
 This is a free and open-source doujin work, and the copyright of all resources used belongs to DDLC (Doki Doki Literature Club). If you encounter payment requests, please check if you have obtained tampered works.
@@ -554,23 +612,80 @@ If the work infringes on your intellectual property rights, please contact the a
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="420"/>
+        <location filename="mainwindow.ui" line="431"/>
+        <source>Show/hide the MAS support plugin!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="438"/>
         <source>MAS Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mw_autoCheckUpdate.cpp" line="88"/>
+        <location filename="mainwindow.ui" line="477"/>
+        <source>Auto download the MAS-CN starter program to ./TEMP (Chinese Language only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="514"/>
+        <source>Get MAS CN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="527"/>
+        <source>Auto download the MAS starter program to ./TEMP (English Language only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="564"/>
+        <source>Get MAS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="581"/>
+        <source>Start Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mw_autoCheckUpdate.cpp" line="101"/>
         <source>There is a new version of DDJM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mw_autoCheckUpdate.cpp" line="91"/>
+        <location filename="mw_autoCheckUpdate.cpp" line="104"/>
         <source>Do you want to update it right now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mw_autoCheckUpdate.cpp" line="92"/>
+        <location filename="mw_autoCheckUpdate.cpp" line="105"/>
         <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mw_buttonOperation.cpp" line="78"/>
+        <location filename="mw_buttonOperation.cpp" line="98"/>
+        <source>Unknown workstation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mw_buttonOperation.cpp" line="79"/>
+        <location filename="mw_buttonOperation.cpp" line="99"/>
+        <source>Perhaps you are running in an unknown workstation, the following operations are ended.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mw_download.cpp" line="8"/>
+        <source>There is already a downloading task now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mw_download.cpp" line="74"/>
+        <source>Downloading finished!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mw_download.cpp" line="93"/>
+        <source>Something wrong for network, downloading is missing</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

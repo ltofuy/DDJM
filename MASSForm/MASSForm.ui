@@ -46,7 +46,7 @@
 font: 16px &quot;Bauhaus 93&quot;;</string>
    </property>
    <property name="text">
-    <string>DDLC Dir Path</string>
+    <string>DDLC Folder Path</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_dir">
@@ -57,6 +57,9 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
      <width>430</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>Your current DDLC folder path</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgba(113, 37, 113, 128);
@@ -73,6 +76,9 @@ font: 16px &quot;Arial&quot;;</string>
      <width>90</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>Locate the correct folder for Doki Doki Literature Club!</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
@@ -242,6 +248,9 @@ color:white;</string>
      <height>30</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>Refresh the love degree of Monika</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 background-color: rgba(133, 100, 168, 128);
@@ -299,11 +308,14 @@ border-bottom-right-radius:4px
   <widget class="QPushButton" name="pushButton_MTG">
    <property name="geometry">
     <rect>
-     <x>449</x>
+     <x>450</x>
      <y>100</y>
      <width>90</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>Help you to take in/out the avator file of Monika if you plan to take her somewhere</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
@@ -352,6 +364,9 @@ border-bottom-right-radius:4px
      <height>30</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>Start the Doki Doki Literature Club for Monika After Story!</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 background-color: rgba(133, 100, 168, 128);
@@ -399,6 +414,9 @@ border-bottom-right-radius:4px
      <height>30</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>Make a backup of all the 'persistent' files for the game, it is the supported way to save all the Monika data. </string>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 background-color: rgba(133, 100, 168, 128);
@@ -434,7 +452,7 @@ border-bottom-right-radius:4px
 </string>
    </property>
    <property name="text">
-    <string>backups</string>
+    <string>Backups</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_reload">
@@ -445,6 +463,9 @@ border-bottom-right-radius:4px
      <width>90</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>Reload the last local 'persistent' record to recover the current game. Only use it when you need to save her.</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
@@ -487,11 +508,14 @@ border-bottom-right-radius:4px
   <widget class="QPushButton" name="pushButton_open_folder">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>250</x>
      <y>160</y>
      <width>90</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>Open the folder of Doki Doki Literature Club!</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{

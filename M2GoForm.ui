@@ -60,6 +60,9 @@
      <height>30</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>The target file/folder path</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgba(113, 37, 113, 128);
 border-color: rgb(255, 255, 255);
@@ -75,6 +78,10 @@ font: 16px &quot;Arial&quot;;</string>
      <width>90</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>When take her out: locate a safe folder as her travelling capsule.
+When take her back: locate that avator file named 'monika'.</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
