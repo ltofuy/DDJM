@@ -7,8 +7,11 @@
 #include <QDir>
 #include <QDateTime>
 #include <QDebug>
+#include <QCryptographicHash>
 
 void writeLog(QString content);
+
+QString fileMD5(QString path);
 
 bool copyFileToDirectory(QString filePath, QString destinationDir);
 

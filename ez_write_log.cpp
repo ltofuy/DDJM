@@ -22,6 +22,21 @@ void writeLog(QString content)
     }
 }
 
+
+QString fileMD5(QString path) {
+    QFile file(path);
+    if (!file.open(QIODevice::ReadOnly)) {
+        //qWarning() << "Cannot open file for reading:" << path;
+        return QString();
+    }
+    QCryptographicHash hash(QCryptographicHash::Md5);
+    if (!hash.addData(&file)) {
+        //qWarning() << "Failed to read file data:" << path;
+        return QString();
+    }
+    return hash.result().toHex();
+}
+
 bool copyFileToDirectory(QString filePath, QString destinationDir) {
     // 创建一个QFile对象
     QFile file(filePath);
@@ -40,8 +55,21 @@ bool copyFileToDirectory(QString filePath, QString destinationDir) {
         }
     }
     // 生成目标文件路径
+    //若目标文件已经存在且md5相同则跳过任务
     QString fileName = QFileInfo(file).fileName();
     QString destinationFilePath = dir.filePath(fileName);
+    if (QFile::exists(destinationFilePath))
+    {
+        if (fileMD5(destinationFilePath) == fileMD5(filePath))
+        {
+            //不要修改
+            return true;
+        }
+        else {
+            //需要删除复制地址的文件
+            QFile::remove(destinationFilePath);
+        }
+    }
     // 复制文件
     if (QFile::copy(filePath, destinationFilePath)) {
         qDebug() << "文件已成功复制到:" << destinationFilePath;
