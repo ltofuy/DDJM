@@ -34,7 +34,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>220</y>
+      <y>30</y>
       <width>320</width>
       <height>188</height>
      </rect>
@@ -63,7 +63,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>240</y>
+      <y>250</y>
       <width>160</width>
       <height>30</height>
      </rect>
@@ -106,14 +106,14 @@ border-bottom-right-radius:4px
 </string>
     </property>
     <property name="text">
-     <string>S Words</string>
+     <string>Sayori Words</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_word_Yuri">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>280</y>
+      <y>290</y>
       <width>160</width>
       <height>30</height>
      </rect>
@@ -156,14 +156,14 @@ border-bottom-right-radius:4px
 </string>
     </property>
     <property name="text">
-     <string>Y Words</string>
+     <string>Yuri Words</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_word_Natsuki">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>320</y>
+      <y>330</y>
       <width>160</width>
       <height>30</height>
      </rect>
@@ -206,14 +206,14 @@ border-bottom-right-radius:4px
 </string>
     </property>
     <property name="text">
-     <string>N Words</string>
+     <string>Natsuki Words</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_word_Monika">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>360</y>
+      <y>370</y>
       <width>160</width>
       <height>30</height>
      </rect>
@@ -256,7 +256,7 @@ border-bottom-right-radius:4px
 </string>
     </property>
     <property name="text">
-     <string>M Words</string>
+     <string>Monika Words</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_find_bg">
