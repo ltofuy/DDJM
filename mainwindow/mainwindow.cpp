@@ -80,6 +80,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->checkBox_MAS, SIGNAL(clicked(bool)), this, SLOT(showMASSupport(bool)));
 
+    connect(ui->checkBox_autoUpdate, SIGNAL(clicked(bool)), this, SLOT(enableAutoUpdate(bool)));
+
     //构建后立即触发
     QTimer::singleShot(5*1000, this, SLOT(autoCheckUpdate()));
 }

@@ -10,6 +10,7 @@
 #include <QUrl>
 #include <QDebug>
 #include <QEvent>
+#include <QMessageBox>
 
 namespace Ui {
 class DDWordDialog;

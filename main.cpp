@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 
     QDir dConfig(QDir::currentPath()+"/Config");
 
+    //在这里我们使用了Leo-iTech-Community软件包的发行标准, 因此我们使用了一个兼容其对版本信息进行声明的*.ini文件
+    //There is an update information generation for a Leo-iTech-Community style of distribution.
     if (dConfig.exists())
     {
         //写入update
@@ -32,10 +34,6 @@ int main(int argc, char *argv[])
 
         qSet.sync();
     }
-
-    //OSOperationWin osWin;
-    //qDebug()<<osWin.getCurrentWindowsUsername();
-
 
     QFont f("Arial");
     f.setPixelSize(16);

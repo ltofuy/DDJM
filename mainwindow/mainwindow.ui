@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="rs_ddjm.qrc">:/Resource/bg.JPG</pixmap>
+     <pixmap resource="../rs_ddjm.qrc">:/Resource/bg.JPG</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_gif">
@@ -387,7 +387,7 @@ font: 16px &quot;Arial&quot;;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="rs_ddjm.qrc">:/Resource/none-icon-mini.png</pixmap>
+     <pixmap resource="../rs_ddjm.qrc">:/Resource/none-icon-mini.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -581,6 +581,42 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
      <string>Start Support</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_find_bg_3">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>20</y>
+      <width>551</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(254, 190, 225, 180);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_autoUpdate">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>30</y>
+      <width>140</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Set if the DDJM shoul be auto upgraded when started. If true, the software will auto-update at once.</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(200, 142, 245);
+font: 16px &quot;Bauhaus 93&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Auto Update</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>label_gif</zorder>
@@ -601,6 +637,8 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
    <zorder>pushButton_word_Natsuki</zorder>
    <zorder>pushButton_word_Sayori</zorder>
    <zorder>pushButton_word_Yuri</zorder>
+   <zorder>label_find_bg_3</zorder>
+   <zorder>checkBox_autoUpdate</zorder>
   </widget>
  </widget>
  <customwidgets>
@@ -612,7 +650,7 @@ font: 16px &quot;Bauhaus 93&quot;;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="rs_ddjm.qrc"/>
+  <include location="../rs_ddjm.qrc"/>
  </resources>
  <connections/>
 </ui>

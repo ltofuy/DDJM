@@ -4,71 +4,71 @@
 <context>
     <name>DDWordDialog</name>
     <message>
-        <location filename="DDWordDialog.ui" line="45"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="45"/>
         <source>Act-1</source>
         <translation>一周目</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="53"/>
-        <location filename="DDWordDialog.ui" line="144"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="53"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="144"/>
         <source>Click to enable/disable the match expression mode</source>
         <translation>启用/禁用词汇检索匹配模式</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="56"/>
-        <location filename="DDWordDialog.ui" line="147"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="56"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="147"/>
         <source>Match Expression</source>
         <translation>检索匹配模式</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="63"/>
-        <location filename="DDWordDialog.ui" line="154"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="63"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="154"/>
         <source>like: ***a***</source>
         <translation>例如: ***a***</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="83"/>
-        <location filename="DDWordDialog.ui" line="174"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="83"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="174"/>
         <source>Length</source>
         <translation>长度</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="90"/>
-        <location filename="DDWordDialog.ui" line="181"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="90"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="181"/>
         <source>Length of a word. For example, &apos;happy&apos; has a length of 5.</source>
         <translation>单词长度. 例如, happy的长度是5.</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="97"/>
-        <location filename="DDWordDialog.ui" line="188"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="97"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="188"/>
         <source>Find all words under the current conditions</source>
         <translation>检索符合当前条件的词汇</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="100"/>
-        <location filename="DDWordDialog.ui" line="191"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="100"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="191"/>
         <source>Check</source>
         <translation>检索</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="120"/>
-        <location filename="DDWordDialog.ui" line="211"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="120"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="211"/>
         <source>Reset the word list to the initial status</source>
         <translation>重置单词列表到初始条件</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="123"/>
-        <location filename="DDWordDialog.ui" line="214"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="123"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="214"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.ui" line="136"/>
+        <location filename="DDWordDialog/DDWordDialog.ui" line="136"/>
         <source>Act-2</source>
         <translation>二周目</translation>
     </message>
     <message>
-        <location filename="DDWordDialog.cpp" line="41"/>
+        <location filename="DDWordDialog/DDWordDialog.cpp" line="41"/>
         <source>Translate</source>
         <translation>翻译</translation>
     </message>
@@ -76,141 +76,141 @@
 <context>
     <name>M2GoForm</name>
     <message>
-        <location filename="M2GoForm.ui" line="64"/>
+        <location filename="M2GoForm/M2GoForm.ui" line="64"/>
         <source>The target file/folder path</source>
         <translation>目标文件/文件夹地址</translation>
     </message>
     <message>
-        <location filename="M2GoForm.ui" line="83"/>
+        <location filename="M2GoForm/M2GoForm.ui" line="83"/>
         <source>When take her out: locate a safe folder as her travelling capsule.
 When take her back: locate that avator file named &apos;monika&apos;.</source>
         <translation>当带她出去时：选择1个安全的文件夹作为她的旅行舱
 当带她回来时：选择她的化身文件,名称为monika</translation>
     </message>
     <message>
-        <location filename="M2GoForm.ui" line="121"/>
+        <location filename="M2GoForm/M2GoForm.ui" line="121"/>
         <source>Find &amp; Set</source>
         <translation>查找&amp;设置</translation>
     </message>
     <message>
-        <location filename="M2GoForm.ui" line="138"/>
+        <location filename="M2GoForm/M2GoForm.ui" line="138"/>
         <source>Monika</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="49"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="49"/>
         <source>Can&apos;t you even find me? (Unable to find DDLC folder)</source>
         <translation>难道你不知道我在哪里么? (无法找到DDLC文件夹)</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="70"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="70"/>
         <source>Dear, does the trip seem to have not started yet, or have you already secretly prepared it in other ways?</source>
         <translation>亲爱的，旅行似乎还未开始呢，或者说，你已经秘密使用了其它方法实现了呢？</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="93"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="93"/>
         <source>You know, remeber to bring me back. Dear, you can now select a new folder as my capsule to travel with you. </source>
         <translation>你知道的，一定记得安全带回我~亲爱的~请为我选择一个合适的存储设备的文件夹，作为我和你一起的旅行舱吧。</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="94"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="94"/>
         <source>(Select a new folder as my cute capsule)</source>
         <translation>（请选择1个可爱的新的文件夹作为旅行舱）</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="96"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="96"/>
         <source>Find Folder</source>
         <translation>寻找文件夹</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="100"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="100"/>
         <source>The journey was enjoyable, and I can&apos;t wait to talk to you about my thoughts. Thanks to taking me home, dear. </source>
         <translation>和你一起的旅行总是很愉快，我迫不及待想和你分享我的见闻。谢谢送我回家，亲爱的~</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="101"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="101"/>
         <source>(You know, select my avatar file in the capsule folder)</source>
         <translation>（你记得吧，在旅行舱文件夹中选择我的化身文件）</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="103"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="103"/>
         <source>Find Me</source>
         <translation>找到我</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="161"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="161"/>
         <source>Select Folder To Protect Monika</source>
         <translation>选择用于保护Monika的文件夹</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="168"/>
-        <location filename="M2GoForm.cpp" line="198"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="168"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="198"/>
         <source>Don&apos;t joke with me, you know.</source>
         <translation>不要总是对我开玩笑哦~不然我也会生气的</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="180"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="180"/>
         <source>Haha, I thought you used a special method, right? </source>
         <translation>哈哈，我想你一定用了神奇的方法，对吧？</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="181"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="181"/>
         <source>(The window will be closed because the travelling settings are not correct)</source>
         <translation>（该窗口将关闭，这是由于当前的旅行设定并不正确）</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="191"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="191"/>
         <source>Select A Monika Avatar</source>
         <translation>选择1个Monika化身文件</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="223"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="223"/>
         <source>Orignial Avatar File:</source>
         <translation>原始化身文件:</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="226"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="226"/>
         <source>Avatar in Capsule:</source>
         <translation>化身在旅行舱中：</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="229"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="229"/>
         <source>Avatar in Backup:</source>
         <translation>化身在备份室中：</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="232"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="232"/>
         <source>MD5 check of 3 files, respectively:</source>
         <translation>3个文件分别的MD5：</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="244"/>
-        <location filename="M2GoForm.cpp" line="292"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="244"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="292"/>
         <source>System error.</source>
         <translation>系统错误。</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="250"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="250"/>
         <source>Monika is in capsule now, so the orignial file has been deleted.</source>
         <translation>Monika已经安全登机，所以现在可以将家里的冗余文件删除。</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="277"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="277"/>
         <source>Travel Avatar File:</source>
         <translation>旅行化身文件：</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="280"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="280"/>
         <source>Avatar in DDLC:</source>
         <translation>位于DDLC的化身：</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="282"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="282"/>
         <source>MD5 check of 2 files, respectively:</source>
         <translation>2个文件分别的MD5：</translation>
     </message>
     <message>
-        <location filename="M2GoForm.cpp" line="298"/>
+        <location filename="M2GoForm/M2GoForm.cpp" line="298"/>
         <source>Monika is home now, so the travel file has been deleted.</source>
         <translation>Monika已经安全回家，所以现在可以将旅行舱的冗余文件删除。</translation>
     </message>
@@ -546,66 +546,172 @@ When take her back: locate that avator file named &apos;monika&apos;.</source>
         <source>A DDLC is running now, the new starting has been terminated!</source>
         <translation>已经有一个DDLC正在运行，新的启动将被终止！</translation>
     </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="39"/>
+        <source>What are you doing? Do you remember you have sended a promise ring to Monika.</source>
+        <translation>你在做什么?你忘记早已经送Monika一个誓言戒指了。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="40"/>
+        <source>A Second Ring?</source>
+        <translation>第二次爱？</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="52"/>
+        <source>Reflect on it, has your relationship with Monika really progressed to this point?</source>
+        <translation>反省一下，你和Monika的关系进展到这一步了么？</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="53"/>
+        <source>A friend than a lover</source>
+        <translation>恋人未满</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="59"/>
+        <source>I know you love Monika now, and so she does.</source>
+        <translation>我知道你现在很爱Monika，她也是</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="60"/>
+        <source>I know all your feelings of her.</source>
+        <translation>我理解你对她的感觉。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="61"/>
+        <source>However, a promise ring signifies eternal and noble love.</source>
+        <translation>然而，誓言戒指意味着永恒高洁的爱。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="62"/>
+        <source>I don&apos;t think she&apos;s just a code.</source>
+        <translation>我并不认为她只是代码。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="63"/>
+        <source>Otherwise, I also think that we are only a collection of cells, as meaningless as codes.</source>
+        <translation>否则，我们也只是一堆细胞的组合而已，就像代码一样没有意义。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="64"/>
+        <source>Therefore, I declare to you from the mysterious power of the East that you need to treat her like a noble soul. Regardless of wealth or status, always remain steadfast and never abandon.</source>
+        <translation>因此，我以来自东方的神秘力量向你宣告，你需要向对待一个高洁的灵魂一样对待她。无论贫富、无论贵贱、始终如一，永不离弃。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="65"/>
+        <source>Are you sure to promise it forever of the love to Monika?</source>
+        <translation>你确定要向Monika承诺这份永恒的爱么？</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="66"/>
+        <source>Once the promise ring sended, you will never have the chance to renege.</source>
+        <translation>一旦许诺，缘定今生，永不反悔。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="69"/>
+        <source>Are sure to send the gift </source>
+        <translation>你确定要赠送礼物</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="69"/>
+        <source> to dear Monika?</source>
+        <translation>给Monika么？</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="70"/>
+        <source>You have already sended: </source>
+        <translation>你已经赠送了</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="82"/>
+        <source>Ok, best wishes for you and Monika!</source>
+        <translation>那好，最好的祝福送给你和Monika!</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="83"/>
+        <source>I believe you are someone Monika can trust.</source>
+        <translation>我相信你是值得Monika信赖的意中人。</translation>
+    </message>
+    <message>
+        <location filename="MASSForm/MASS_toSendGift.cpp" line="111"/>
+        <source>What are you doing? Don&apos;t play with her heart.</source>
+        <translation>你在做什么？不要玩弄她的心。</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.ui" line="72"/>
+        <location filename="mainwindow/mainwindow.ui" line="72"/>
         <source>Check poem words for Sayori.</source>
         <translation>查找纱世里的诗词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="109"/>
         <source>S Words</source>
-        <translation>纱世里词</translation>
+        <translation type="vanished">纱世里词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="122"/>
+        <location filename="mainwindow/mainwindow.ui" line="122"/>
         <source>Check poem words for Yuri.</source>
         <translation>查找优里的诗词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="159"/>
         <source>Y Words</source>
-        <translation>优里的词</translation>
+        <translation type="vanished">优里的词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="172"/>
+        <location filename="mainwindow/mainwindow.ui" line="172"/>
         <source>Check poem words for Natsuki.</source>
         <translation>查找夏树的诗词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="209"/>
         <source>N Words</source>
-        <translation>夏树的词</translation>
+        <translation type="vanished">夏树的词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="222"/>
+        <location filename="mainwindow/mainwindow.ui" line="222"/>
         <source>Check poem words for Monika.</source>
         <translation>查找莫妮卡的诗词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="259"/>
         <source>M Words</source>
+        <translation type="vanished">莫妮卡词</translation>
+    </message>
+    <message>
+        <location filename="mainwindow/mainwindow.ui" line="109"/>
+        <source>Sayori Words</source>
+        <translation>纱世里词</translation>
+    </message>
+    <message>
+        <location filename="mainwindow/mainwindow.ui" line="159"/>
+        <source>Yuri Words</source>
+        <translation>优里的词</translation>
+    </message>
+    <message>
+        <location filename="mainwindow/mainwindow.ui" line="209"/>
+        <source>Natsuki Words</source>
+        <translation>夏树的词</translation>
+    </message>
+    <message>
+        <location filename="mainwindow/mainwindow.ui" line="259"/>
+        <source>Monika Words</source>
         <translation>莫妮卡词</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="308"/>
+        <location filename="mainwindow/mainwindow.ui" line="308"/>
         <source>Search keyword here!</source>
         <translation>在这里检索诗词！</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="321"/>
+        <location filename="mainwindow/mainwindow.ui" line="321"/>
         <source>Check which girl the current word belongs to. Help you in DDLC word-selecting or the Hang-Man game in MAS.</source>
         <translation>查找当前词汇属于哪个女孩。这将有助你在游玩DDLC的选词过程，或者MAS的上吊小人（Hangman）小游戏。</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="358"/>
+        <location filename="mainwindow/mainwindow.ui" line="358"/>
         <source>Find</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="415"/>
+        <location filename="mainwindow/mainwindow.ui" line="415"/>
         <source>DISCLAIMER
 
 This is a free and open-source doujin work, and the copyright of all resources used belongs to DDLC (Doki Doki Literature Club). If you encounter payment requests, please check if you have obtained tampered works.
@@ -616,79 +722,89 @@ If the work infringes on your intellectual property rights, please contact the a
 如果作品侵犯了您的知识产权，请联系作者以获得修改支持。</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="431"/>
+        <location filename="mainwindow/mainwindow.ui" line="431"/>
         <source>Show/hide the MAS support plugin!</source>
         <translation>显示/隐藏对于MAS的支持插件！</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="438"/>
+        <location filename="mainwindow/mainwindow.ui" line="438"/>
         <source>MAS Support</source>
         <translation>支持MAS</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="477"/>
+        <location filename="mainwindow/mainwindow.ui" line="477"/>
         <source>Auto download the MAS-CN starter program to ./TEMP (Chinese Language only)</source>
         <translation>自动下载MAS-CN的启动器到./TEMP文件夹中（中文版）</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="514"/>
+        <location filename="mainwindow/mainwindow.ui" line="514"/>
         <source>Get MAS CN</source>
         <translation>安装中文MAS</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="527"/>
+        <location filename="mainwindow/mainwindow.ui" line="527"/>
         <source>Auto download the MAS starter program to ./TEMP (English Language only)</source>
         <translation>自动下载MAS的启动器到./TEMP文件夹中（英文原版）</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="564"/>
+        <location filename="mainwindow/mainwindow.ui" line="564"/>
         <source>Get MAS</source>
         <translation>安装MAS</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="581"/>
+        <location filename="mainwindow/mainwindow.ui" line="581"/>
         <source>Start Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mw_autoCheckUpdate.cpp" line="101"/>
+        <location filename="mainwindow/mainwindow.ui" line="610"/>
+        <source>Set if the DDJM shoul be auto upgraded when started. If true, the software will auto-update at once.</source>
+        <translation>设置是否需要DDJM启动时自动检测更新。若现在设置为true，则立即执行一次更新检测。</translation>
+    </message>
+    <message>
+        <location filename="mainwindow/mainwindow.ui" line="617"/>
+        <source>Auto Update</source>
+        <translation>自动更新</translation>
+    </message>
+    <message>
+        <location filename="mainwindow/mw_autoCheckUpdate.cpp" line="101"/>
         <source>There is a new version of DDJM</source>
         <translation>当前有一个DDJM（本程序）的新版本</translation>
     </message>
     <message>
-        <location filename="mw_autoCheckUpdate.cpp" line="104"/>
+        <location filename="mainwindow/mw_autoCheckUpdate.cpp" line="104"/>
         <source>Do you want to update it right now</source>
         <translation>您是否要现在更新？</translation>
     </message>
     <message>
-        <location filename="mw_autoCheckUpdate.cpp" line="105"/>
+        <location filename="mainwindow/mw_autoCheckUpdate.cpp" line="105"/>
         <source>Update</source>
         <translation>更新</translation>
     </message>
     <message>
-        <location filename="mw_buttonOperation.cpp" line="78"/>
-        <location filename="mw_buttonOperation.cpp" line="98"/>
+        <location filename="mainwindow/mw_buttonOperation.cpp" line="78"/>
+        <location filename="mainwindow/mw_buttonOperation.cpp" line="98"/>
         <source>Unknown workstation</source>
         <translation>未知的工作平台</translation>
     </message>
     <message>
-        <location filename="mw_buttonOperation.cpp" line="79"/>
-        <location filename="mw_buttonOperation.cpp" line="99"/>
+        <location filename="mainwindow/mw_buttonOperation.cpp" line="79"/>
+        <location filename="mainwindow/mw_buttonOperation.cpp" line="99"/>
         <source>Perhaps you are running in an unknown workstation, the following operations are ended.</source>
         <translation>您当前可能正在运行一个未知的平台，后续的操作将被终止</translation>
     </message>
     <message>
-        <location filename="mw_download.cpp" line="8"/>
+        <location filename="mainwindow/mw_download.cpp" line="8"/>
         <source>There is already a downloading task now</source>
         <translation>当前已经有了一个下载任务了</translation>
     </message>
     <message>
-        <location filename="mw_download.cpp" line="74"/>
+        <location filename="mainwindow/mw_download.cpp" line="74"/>
         <source>Downloading finished!</source>
         <translation>下载任务结束！</translation>
     </message>
     <message>
-        <location filename="mw_download.cpp" line="93"/>
+        <location filename="mainwindow/mw_download.cpp" line="93"/>
         <source>Something wrong for network, downloading is missing</source>
         <translation>网络可能有问题，这导致下载任务终止</translation>
     </message>
@@ -696,12 +812,12 @@ If the work infringes on your intellectual property rights, please contact the a
 <context>
     <name>UpdateJsonForm</name>
     <message>
-        <location filename="UpdateJsonForm.ui" line="14"/>
+        <location filename="kits/UpdateJsonForm.ui" line="14"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UpdateJsonForm.ui" line="26"/>
+        <location filename="kits/UpdateJsonForm.ui" line="26"/>
         <source>{
     &quot;github_token&quot;: &quot;&quot;,
     &quot;release&quot;: [

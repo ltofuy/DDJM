@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.2.4
+VERSION = 0.2.5
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"252N\\\"
+DEFINES += APP_EDITION=\\\"252P\\\"
 
 DEFINES += TEAM_WEB=\\\"https://github.com/ltofuy/DDJM/releases/download/latest\\\"
 
@@ -31,11 +31,22 @@ TRANSLATIONS += \
     Doki-Doki-Just-Monika_zh_CN.ts
 
 INCLUDEPATH += ./MASSForm
+INCLUDEPATH += ./DDLCWordDic
+INCLUDEPATH += ./DDWordDialog
+INCLUDEPATH += ./kits
+INCLUDEPATH += ./mainwindow
+INCLUDEPATH += ./M2GoForm
 
 SOURCES += \
-    DDLCWordDic.cpp \
-    DDWordDialog.cpp \
-    M2GoForm.cpp \
+    DDLCWordDic/DDLCWordDic.cpp \
+    DDWordDialog/DDWordDialog.cpp \
+    DDWordDialog/DDWordDialog_slots_check.cpp \
+    DDWordDialog/DDWordDialog_slots_getTranslation.cpp \
+    DDWordDialog/DDWordDialog_slots_reset.cpp \
+    DDWordDialog/DDWordDialog_slots_setWord.cpp \
+    DDWordDialog/DDWordDialog_slots_toEnableMatch.cpp \
+    DDWordDialog/DDWordDialog_slots_translateOL.cpp \
+    M2GoForm/M2GoForm.cpp \
     MASSForm/MASSForm.cpp \
     MASSForm/MASS_QFileInfoList_getGiftFiles.cpp \
     MASSForm/MASS_QJsonObject_loadJson.cpp \
@@ -51,37 +62,38 @@ SOURCES += \
     MASSForm/MASS_slot_reload.cpp \
     MASSForm/MASS_slot_visitMonika.cpp \
     MASSForm/MASS_toSendGift.cpp \
-    OSOperationWin.cpp \
-    UpdateJsonForm.cpp \
-    ez_write_log.cpp \
+    kits/OSOperationWin.cpp \
+    kits/UpdateJsonForm.cpp \
+    kits/ez_write_log.cpp \
     main.cpp \
-    mainwindow.cpp \
-    mw_autoCheckUpdate.cpp \
-    mw_buttonOperation.cpp \
-    mw_checkFileLoopTask.cpp \
-    mw_checkLanguage.cpp \
-    mw_clearDir.cpp \
-    mw_createDir.cpp \
-    mw_download.cpp \
-    mw_quickSearch.cpp \
-    mw_showMASSupport.cpp
+    mainwindow/mainwindow.cpp \
+    mainwindow/mw_autoCheckUpdate.cpp \
+    mainwindow/mw_buttonOperation.cpp \
+    mainwindow/mw_checkFileLoopTask.cpp \
+    mainwindow/mw_checkLanguage.cpp \
+    mainwindow/mw_clearDir.cpp \
+    mainwindow/mw_createDir.cpp \
+    mainwindow/mw_download.cpp \
+    mainwindow/mw_quickSearch.cpp \
+    mainwindow/mw_showMASSupport.cpp \
+    mainwindow/mw_slots_enableAutoUpdate.cpp
 
 HEADERS += \
-    DDLCWordDic.h \
-    DDWordDialog.h \
-    M2GoForm.h \
+    DDLCWordDic/DDLCWordDic.h \
+    DDWordDialog/DDWordDialog.h \
+    M2GoForm/M2GoForm.h \
     MASSForm/MASSForm.h \
-    OSOperationWin.h \
-    UpdateJsonForm.h \
-    ez_write_log.h \
-    mainwindow.h
+    kits/OSOperationWin.h \
+    kits/UpdateJsonForm.h \
+    kits/ez_write_log.h \
+    mainwindow/mainwindow.h
 
 FORMS += \
-    DDWordDialog.ui \
-    M2GoForm.ui \
+    DDWordDialog/DDWordDialog.ui \
+    M2GoForm/M2GoForm.ui \
     MASSForm/MASSForm.ui \
-    UpdateJsonForm.ui \
-    mainwindow.ui
+    kits/UpdateJsonForm.ui \
+    mainwindow/mainwindow.ui
 
 RESOURCES += \
     rs_ddjm.qrc

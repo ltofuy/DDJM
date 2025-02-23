@@ -102,6 +102,9 @@ public slots:
     //自动检测更新处理;
     void autoCheckUpdate();
 
+    //设置自动更新
+    void enableAutoUpdate(bool b);
+
     //循环loop检查
     void checkFileLoopTask();
 
