@@ -24,7 +24,7 @@ MASSForm::MASSForm(QWidget *parent) :
     QWidget *widget_in_tab_default=ui->tab_clothes;
     QTableWidget *table_in_tab_default=ui->tableWidget_clothes;
     QString styleSheet_widget=widget_in_tab_default->styleSheet();
-    QString styleSheet_table=table_in_tab_default->styleSheet().replace("\n", "").replace("\\n", "");
+    QString styleSheet_table=table_in_tab_default->styleSheet().replace("\n", "").replace("\\n", "") + "QTableCornerButton::section{background-color: transparent;color:white;}";
     QString styleSheet_button=ui->pushButton_find->styleSheet();
     //qDebug()<<styleSheet_table;
     QSize tableSize=table_in_tab_default->size();
@@ -81,15 +81,51 @@ MASSForm::MASSForm(QWidget *parent) :
         giftJsonInMods.clear();
     }
 
+    //这里有一个强制替换dic
+    QVector<QStringList> type_force_list=QVector<QStringList>{
+        QStringList{"ribbon", "发带"},
+        QStringList{"left-hair-clip", "左发卡"},
+        QStringList{"earrings", "耳环"},
+        QStringList{"choker", "项圈"},
+        QStringList{"front-bow", "front-bow"},
+        QStringList{"hair", "发型"},
+        QStringList{"clothes", "套装"},
+        QStringList{"necklace", "项链"},
+        QStringList{"left-hair-flower", "左头花"},
+        QStringList{"", "其它"}
+    };
+
+    //这里有一个强制禁用dic
+    QStringList type_banned_list = QStringList{"hair", "front-bow"};
+
+    //翻译
+    int language = qSetConfig.value("UI/Language").toInt();
+
     //依据type个数进行处理
     for (int i=0;i<allTypes.count();++i)
     {
         QString subName=allTypes.at(i);
-        //qDebug()<<subName;
+
+        //判断是否强制翻译
+        if (language == 1)
+        {
+            //强制翻译;
+            for (int j=0;j<type_force_list.count();++j)
+            {
+                if (type_force_list.at(j).first() == subName)
+                {
+                    subName = type_force_list.at(j).last();
+                    break;
+                }
+            }
+        }
+
+        //判断空为other
         if (subName == "")
         {
-            subName = tr("Other");
+            subName = "other";
         }
+
         if (i==0)
         {
             //不新增, 只增加现有
@@ -160,6 +196,17 @@ MASSForm::MASSForm(QWidget *parent) :
         //使用重写的refreshGiftStatus
         refreshGiftStatus(i);
     }
+
+    for (int i=0;i<allTypes.count();++i)
+    {
+        QString subName=allTypes.at(i);
+
+        if (type_banned_list.contains(allTypes.at(i)))
+        {
+            ui->tabWidget->setTabEnabled(i, false);
+        }
+    }
+
 
     //这里做一个判断, 如果DDLC文件夹存在, 且依据是否存在Monika化身对M2G的
 

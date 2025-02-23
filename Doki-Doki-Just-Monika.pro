@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.2.5
+VERSION = 0.2.6
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"252P\\\"
+DEFINES += APP_EDITION=\\\"252Q\\\"
 
 DEFINES += TEAM_WEB=\\\"https://github.com/ltofuy/DDJM/releases/download/latest\\\"
 

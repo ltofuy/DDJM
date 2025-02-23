@@ -157,14 +157,15 @@ color:white;
 QTabBar::tab:selected{
 	color: rgb(255, 255, 127);
 background-color: rgb(243, 162, 231);
-}</string>
+}
+QTabBar::tab:disabled {min-width:0px; width: 0; color: transparent;}</string>
    </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
    <widget class="QWidget" name="tab_clothes">
     <attribute name="title">
-     <string>Clothes</string>
+     <string notr="true"/>
     </attribute>
     <widget class="QTableWidget" name="tableWidget_clothes">
      <property name="geometry">
@@ -185,11 +186,7 @@ background-color: transparent;
 color:white;
 }
 
-QTableCornerButton::section
-{
-background-color: transparent;
-color:white;
-}
+QTableCornerButton::section{background-color: transparent;color:white;}
 
 QScrollBar:vertical {
     border: none;

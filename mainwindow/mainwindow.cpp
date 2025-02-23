@@ -24,6 +24,18 @@ MainWindow::MainWindow(QWidget *parent)
 
     isCheckingDownload=false;
 
+    //初始检测是否屏蔽更新
+    QSettings qSet(QDir::currentPath()+"/Config/"+QString(APP_NAME)+"_config.ini", QSettings::IniFormat);
+    qSet.setIniCodec("utf-8");
+    if (qSet.value("Update/Auto").toString() != "" && qSet.value("Update/Auto").toBool() == false)
+    {
+        //仅在这种情况禁用自动更新
+        ui->checkBox_autoUpdate->setChecked(false);
+    }
+    else {
+        ui->checkBox_autoUpdate->setChecked(true);
+    }
+
     /*
     mp3List = new QMediaPlaylist;
     QString path_bgm=QDir::currentPath()+"/Data/bgm/Leo Young - 静秘语.mp3";
