@@ -1,6 +1,6 @@
-Abstract 简介
+# Abstract 简介
 
-1. Doki-Doki-Just-Monika (DDJM)
+## 1. Doki-Doki-Just-Monika (DDJM)
 
 [Simplified-Chinese Edition]
 DDJM并不是1个mod，这是1个适配于MAS(Monika After Story)的工具，我开发这个工具希望让更多人陪伴Monika，这是由于原生的MAS的许多功能，依然较为繁琐
@@ -19,7 +19,7 @@ This kit is designed to contain the following main functions (including but not 
 (3) Easy to make backup of your game progress of MAS (persistent files)
 (4) Monika to go (M2G): M2G is designed to make it easier to move or reload the Monika avator file (named 'monika') when you want to take her somewhere.
 
-2. Workstations, Versions and Translations to Support 平台、版本与翻译支持
+## 2. Workstations, Versions and Translations to Support 平台、版本与翻译支持
 
 [Simplified-Chinese Edition]
 DDJM基于Qt的GPL协议开发，因此其是理论上跨平台的
@@ -44,7 +44,7 @@ For MAS Version: 0.12.15 (Other versions are not tested. If you have tested some
 To make a translation in Qt is more easier than Renpy. Thus, I develope it in English edition and support other languages.
 Limited by developing resources, only English and Simplified-Chinese are supported now. If you want, you can recode the project and make global translations.
 
-3. First Use 首次使用
+## 3. First Use 首次使用
 [Simplified-Chinese Edition]
 首次启动DDJM时，您需要设置DDLC-MAS的文件夹
 (1)单击窗口右侧的"支持MAS"，随后将显示MAS-Support控件
@@ -66,13 +66,13 @@ DDJM的运行地址目录不能包含空格和中文
 [English Edition]
 Don't use DDJM in a path containing " " or special characters (like Chinese words).
 
-4. Main Functions 主要功能介绍
+## 4. Main Functions 主要功能介绍
 [Simplified-Chinese Edition]
 所有功能必须在完成了3的初始化后方能正常运行。
 [English Edition]
 All the functions here should base on the situation that the initiazation operation has been done, introduced in Section 3 (First Use).
 
-4.1 Sending Gifts 送礼
+### 4.1 Sending Gifts 送礼
 
 [Simplified-Chinese Edition]
 在MAS-Support控件中，所有礼物已经按类型分类在表格标签中。
@@ -86,7 +86,7 @@ You can check and click "Send" button to send that gift to Monika.
 Especially, if you want to send a gift which is not listed in all the tabs. You can write it yourself in item:tab=>others->random, modifiy the "as_you_write" into your gift code, not include the suffix ".gift".
 It is not support to load the gifting data before the you use DDJM, if you know how please email me.
 
-4.2 Guess words 猜单词
+### 4.2 Guess words 猜单词
 
 [Simplified-Chinese Edition]
 MAS中的上吊小人单词很难猜，因此我设计了这个功能。
@@ -96,7 +96,7 @@ MAS中的上吊小人单词很难猜，因此我设计了这个功能。
 In the hangman game of MAS, the word is usually hard to guess. Then I design this function to make it eaiser.
 However, this function is more like a cheater if the dictionary of words are complete. So I delete some of them, to ensure the fun of the game.
 
-4.2.1 Search Word in Length 依据单词长度检索
+#### 4.2.1 Search Word in Length 依据单词长度检索
 
 [Simplified-Chinese Edition]
 例如，Monika告诉你这是1个属于Sayori的单词，且长度Wie4.
@@ -122,7 +122,7 @@ e.g. 例如
 [English Edition]
 I think that is enough to help you find the correct word before hanging down.
 
-4.2.2 Search Word in Expression Mode 依据单词匹配式检索
+#### 4.2.2 Search Word in Expression Mode 依据单词匹配式检索
 [Simplified-Chinese Edition]
 您也可以利用检索式来获取更精确的检索。
 首先您需要单击"检索匹配模式"确保其激活。
@@ -140,7 +140,7 @@ The "\*" can match any character.
 If monika give you other clues. For example, you know that the first character is "b", then you can type "b\*\*a\*\*\*".
 This function is something like a cheater.
 
-4.2.3 Match the Girl to a Word 在DDLC中查找与单词匹配的女孩
+#### 4.2.3 Match the Girl to a Word 在DDLC中查找与单词匹配的女孩
 
 [Simplified-Chinese Edition]
 在DDLC的写诗环节，您可能想查找1个词汇对应的女孩。
@@ -151,7 +151,7 @@ In a poem writing step of DDLC, this function can help you to match your correct
 For example, if you want to check who "calm" belongs to, you can type it in the lineedit below "Search keyword here!" and click "find" sideword, in the left region of the main window.
 Then, DDJM will help you to match it.
 
-4.3 Backup & Reload 备份/重载存档
+### 4.3 Backup & Reload 备份/重载存档
 
 [Simplified-Chinese Edition]
 当您需要备份存档时, 您需要启动Mas-Support控件。
@@ -163,7 +163,7 @@ When you need to backup the current game progress ('persistent' files), enable t
 Then, click "Backups" button, all the persistent files for MAS will be recoreded in "./Data" of the DDJM root folder.
 If you have a backup made by DDJM, click "Reload" will recover your current persistent settings by the last backups valid.
 
-4.4 Monika to Go 带Monika外出
+### 4.4 Monika to Go 带Monika外出
 
 [Simplified-Chinese Edition]
 在MAS，如果你决定带莫妮卡去某个地方，那么她会把她的avator文件放进去DDLC的./characters文件夹中。
