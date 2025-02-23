@@ -18,8 +18,8 @@ This kit is designed to contain the following main functions (including but not 
 (3) Easy to make backup of your game progress of MAS (persistent files)<br>
 (4) Monika to go (M2G): M2G is designed to make it easier to move or reload the Monika avator file (named 'monika') when you want to take her somewhere.<br>
 
-![Main Window](Resource/DDJM-pic-1.png.png)<br>
-![Main Window](Resource/DDJM-pic-2.png.png)<br>
+![Main Window](Resource/DDJM-pic-1.png)<br>
+![Main Window](Resource/DDJM-pic-2.png)<br>
 
 ## 2. Workstations, Versions and Translations to Support 平台、版本与翻译支持
 
