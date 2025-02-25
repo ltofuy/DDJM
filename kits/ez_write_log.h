@@ -15,5 +15,6 @@ QString fileMD5(QString path);
 
 bool copyFileToDirectory(QString filePath, QString destinationDir);
 
+bool copyDirectory(QString sourcePath, QString destinationPath);
 
 #endif // EZ_WRITE_LOG_H

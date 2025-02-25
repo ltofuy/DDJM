@@ -59,6 +59,8 @@ void MASSForm::makeBackup()
         //qDebug()<<dir_MAS_persistent.path();
 
         //获取备份文件夹
+        //记录临时名
+        temp_backup_dirname="Monika After Story "+timeStamp;
         QString backupDirPath=QDir::currentPath()+"/Data/Monika After Story "+timeStamp;
         QDir dir_MAS_p_backups(backupDirPath);
         if (!dir_MAS_p_backups.exists(backupDirPath))
@@ -103,6 +105,7 @@ void MASSForm::makeBackup()
             QSettings qSet(QDir::currentPath()+"/Config/"+QString(APP_NAME)+"_config.ini", QSettings::IniFormat);
             qSet.setIniCodec("utf-8");
             qSet.setValue("Last/persistent_folder_backup", backupDirPath);
+            temp_backup_dirpath=backupDirPath;
             qSet.sync();
         }
 

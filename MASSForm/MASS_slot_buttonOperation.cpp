@@ -58,6 +58,10 @@ void MASSForm::buttonOperation(int a)
         //打开DDLC文件夹
         openDDLCFolder();
         break;
+    case 7:
+        //同步
+        sync();
+        break;
     }
 }
 

@@ -239,7 +239,7 @@ color:white;</string>
   <widget class="QPushButton" name="pushButton_monika_love">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>110</x>
      <y>100</y>
      <width>90</width>
      <height>30</height>
@@ -291,7 +291,7 @@ border-bottom-right-radius:4px
     <rect>
      <x>10</x>
      <y>100</y>
-     <width>120</width>
+     <width>100</width>
      <height>30</height>
     </rect>
    </property>
@@ -505,7 +505,7 @@ border-bottom-right-radius:4px
   <widget class="QPushButton" name="pushButton_open_folder">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>10</x>
      <y>160</y>
      <width>90</width>
      <height>30</height>
@@ -550,6 +550,56 @@ border-bottom-right-radius:4px
    </property>
    <property name="text">
     <string>Open Folder</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sync">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>160</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Synchronize or load archives from your folder (e.g. from your OneDrive, Baidu Cloud)</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: rgba(133, 100, 168, 128);
+color:white;
+font: 16px &quot;Bauhaus 93&quot;;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+
+QPushButton:hover{
+background-color: rgb(255, 189, 225);
+	color: rgb(200, 142, 242);
+font: 16px;
+border:2px solid gray;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+QPushButton:pressed{
+background-color: rgb(255, 228, 245);
+color:white;
+font: 16px;
+border:2px solid white;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-left-radius:4px;
+border-bottom-right-radius:4px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Sync</string>
    </property>
   </widget>
  </widget>

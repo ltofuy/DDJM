@@ -79,3 +79,29 @@ bool copyFileToDirectory(QString filePath, QString destinationDir) {
         return false;
     }
 }
+
+bool copyDirectory(QString sourcePath, QString destinationPath) {
+    QDir sourceDir(sourcePath);
+    if (!sourceDir.exists()) {
+        qDebug() << "Source directory does not exist.";
+        return false; // 源目录不存在
+    }
+    QDir destinationDir(destinationPath);
+    if (!destinationDir.exists()) {
+        destinationDir.mkdir(destinationPath); // 创建目标目录
+    }
+    // 获取源目录下的所有文件和子目录
+    QFileInfoList fileInfoList = sourceDir.entryInfoList(QDir::NoDotAndDotDot | QDir::AllEntries);
+    foreach (const QFileInfo &fileInfo, fileInfoList) {
+        QString srcFilePath = fileInfo.filePath();
+        QString destFilePath = destinationPath + "/" + fileInfo.fileName();
+        if (fileInfo.isDir()) {
+            // 递归复制子目录
+            copyDirectory(srcFilePath, destFilePath);
+        } else {
+            // 复制文件
+            QFile::copy(srcFilePath, destFilePath);
+        }
+    }
+    return true; // 成功复制
+}

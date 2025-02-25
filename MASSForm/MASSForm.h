@@ -16,10 +16,13 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QPoint>
+#include <QSettings>
 
 #include "M2GoForm.h"
 
 #include "OSOperationWin.h"
+
+#include "ez_write_log.h"
 
 namespace Ui {
 class MASSForm;
@@ -76,12 +79,12 @@ public:
     //true存档时不在弹出对话框;
     bool isSilentBackup;
 
+    //用于临时记录备份时的文件夹名
+    QString temp_backup_dirname;
+    QString temp_backup_dirpath;
+
+
     // 【作废】依据目录判断类型
-    //0->clothes
-    //1->ribbon
-    //2->hairclip
-    //3->earring
-    //4->other
     int appearanceType(QDir dir);
 
     // 【作废】判断四否为thumb
@@ -136,6 +139,9 @@ public slots:
 
     //指定保存的文件, 读取其并刷新当前的送出情况
     void refreshGiftStatus(int a);
+
+    //同步功能
+    void sync();
 };
 
 #endif // MASSFORM_H

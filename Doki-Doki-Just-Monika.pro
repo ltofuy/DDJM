@@ -14,10 +14,10 @@ RC_ICONS = Resource/icon.ico
 
 TARGET = Doki-Doki-Just-Monika
 TEMPLATE = app
-VERSION = 0.2.6
+VERSION = 0.2.7
 DEFINES += APP_NAME=\\\"$$TARGET\\\"
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_EDITION=\\\"252Q\\\"
+DEFINES += APP_EDITION=\\\"252R\\\"
 
 DEFINES += TEAM_WEB=\\\"https://github.com/ltofuy/DDJM/releases/download/latest\\\"
 
@@ -61,6 +61,9 @@ SOURCES += \
     MASSForm/MASS_slot_refreshGiftStatus.cpp \
     MASSForm/MASS_slot_reload.cpp \
     MASSForm/MASS_slot_visitMonika.cpp \
+    MASSForm/MASS_slots_findDir.cpp \
+    MASSForm/MASS_slots_refreshMonikaLove.cpp \
+    MASSForm/MASS_slots_sync.cpp \
     MASSForm/MASS_toSendGift.cpp \
     kits/OSOperationWin.cpp \
     kits/UpdateJsonForm.cpp \
